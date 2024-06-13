@@ -6,6 +6,7 @@
 # print("Hello World!\nHello world!\nHello World!")
 # print("Hello" + "Sid")
 # print("Hello" + " " +"Sid")
+import random
 
 #what is syntax error and indentation error
 #The word debugging means
@@ -300,83 +301,84 @@
 
 #Logical Operators
 
-print("Welcome to the rollercoaster!")
-height = int(input("What is your height in cm? \n"))
-age = int(input("What is your age? \n"))
-bill = 0
-if height >= 120:
-    print("You can ride the rollercoaster!")
-    if age < 12:
-        bill = 5
-        print("Child tickets are $5.")
-    elif age <= 18:
-        bill = 7
-        print("Youth tickets are $7.")
-    elif age >= 45 and age <= 55:
-        print("Everything is going to be ok. Have a free ride on us!")
-    else:
-        bill = 12
-        print("Adult tickets are $12.")
-
-    wants_photo = input("Do you want a photo taken? Y or N \n")
-    if wants_photo == "Y":
-        bill += 3
-    print(f"Your final bill is ${bill}")
-else:
-    print("Sorry, You have to grow taller before you can ride.")
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? \n"))
+# age = int(input("What is your age? \n"))
+# bill = 0
+# if height >= 120:
+#     print("You can ride the rollercoaster!")
+#     if age < 12:
+#         bill = 5
+#         print("Child tickets are $5.")
+#     elif age <= 18:
+#         bill = 7
+#         print("Youth tickets are $7.")
+#     elif age >= 45 and age <= 55:
+#         print("Everything is going to be ok. Have a free ride on us!")
+#     else:
+#         bill = 12
+#         print("Adult tickets are $12.")
+#
+#     wants_photo = input("Do you want a photo taken? Y or N \n")
+#     if wants_photo == "Y":
+#         bill += 3
+#     print(f"Your final bill is ${bill}")
+# else:
+#     print("Sorry, You have to grow taller before you can ride.")
 
 #Love Calculator
 
-print("The Love Calculator is calculating your score....")
-name1 = input("What is your name?\n")
-name2 = input("What is their name?\n")
-combined_names = name1 + name2
-lower_names = combined_names.lower()
-t = lower_names.count("t")
-r = lower_names.count("r")
-u = lower_names.count("u")
-e = lower_names.count("e")
-first_digit = t + r + u + e
-
-l = lower_names.count("l")
-o = lower_names.count("o")
-v = lower_names.count("v")
-e = lower_names.count("e")
-second_digit = l + o + v + e
-
-score = int(str(first_digit) + str(second_digit))
-if (score < 10) or (score > 90):
-    print(f"your score is {score}, you go together like coke and mentos.")
-elif (score >= 40) and (score <= 50):
-    print(f"your score is {score}, you are alright together.")
-else:
-    print(f"your score is {score}.")
-
+# print("The Love Calculator is calculating your score....")
+# name1 = input("What is your name?\n")
+# name2 = input("What is their name?\n")
+# combined_names = name1 + name2
+# lower_names = combined_names.lower()
+# t = lower_names.count("t")
+# r = lower_names.count("r")
+# u = lower_names.count("u")
+# e = lower_names.count("e")
+# first_digit = t + r + u + e
+#
+# l = lower_names.count("l")
+# o = lower_names.count("o")
+# v = lower_names.count("v")
+# e = lower_names.count("e")
+# second_digit = l + o + v + e
+#
+# score = int(str(first_digit) + str(second_digit))
+# if (score < 10) or (score > 90):
+#     print(f"your score is {score}, you go together like coke and mentos.")
+# elif (score >= 40) and (score <= 50):
+#     print(f"your score is {score}, you are alright together.")
+# else:
+#     print(f"your score is {score}.")
+#
 
 # Treasure Island project
 
-print("Welcome to Treasure Island.")
-print("Your mission is to find the treasure.")
-choice1 = input('You have at a crossroad, where do you want to go? Type "left" or "right".\n').lower()
-
-if choice1 == "left":
-    choice2 = input('You have to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across.\n').lower()
-    if choice2 == "wait":
-        choice3 = input("You arrive at the island unharmed. There is a with 3 doors. One red, one yellow and one blue.\n").lower()
-        if choice3 == "red":
-            print("It's a room full of fire. Game Over.")
-        elif choice3 == "yellow":
-            print("You found the treasure! You Win!")
-        elif choice3 == "blue":
-            print("You enter a room of beasts. Game Over.")
-        else:
-            print("You chose a door that doesn't exist. Game Over.")
-    else:
-        print("You got attacked by an angry trout. Game Over.")
-else:
-    print("You fell into a hole. Game Over.")
+# print("Welcome to Treasure Island.")
+# print("Your mission is to find the treasure.")
+# choice1 = input('You have at a crossroad, where do you want to go? Type "left" or "right".\n').lower()
+#
+# if choice1 == "left":
+#     choice2 = input('You have to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across.\n').lower()
+#     if choice2 == "wait":
+#         choice3 = input("You arrive at the island unharmed. There is a with 3 doors. One red, one yellow and one blue.\n").lower()
+#         if choice3 == "red":
+#             print("It's a room full of fire. Game Over.")
+#         elif choice3 == "yellow":
+#             print("You found the treasure! You Win!")
+#         elif choice3 == "blue":
+#             print("You enter a room of beasts. Game Over.")
+#         else:
+#             print("You chose a door that doesn't exist. Game Over.")
+#     else:
+#         print("You got attacked by an angry trout. Game Over.")
+# else:
+#     print("You fell into a hole. Game Over.")
 
 # Random Module
+
 import random
 random_integer = random.randint(1, 10)
 print(random_integer)
@@ -392,3 +394,111 @@ if random_side == 1:
     print("Head")
 else:
     print("Tail")
+
+# [Interactive Coding Exercise] Banker Roulette - Who will pay the bill?
+
+names_string = input("Enter the names your friends\n")
+names = names_string.split(", ")
+
+import random
+
+num_items = len(names)
+random_choice = random.randint(0, num_items-1)
+print(names[random_choice])
+
+# IndexErrors and Working with Nested Lists
+
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "kale", "Tomatoes", "Celery", "Potatoes"]
+
+dirty_dozen = [fruits, vegetables]
+print(dirty_dozen)
+
+
+# Quiz
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+dirty_dozen = [fruits, vegetables]
+
+print(dirty_dozen[1][1])
+
+
+# [Interactive Coding Exercise] Treasure Map
+
+line1 = [" ", " ", " "]
+line2 = [" ", " ", " "]
+line3 = [" ", " ", " "]
+map = [line1, line2, line3]
+print("Hiding your treasure! x marks the spot.")
+position = input("Where do you want to put the treasure\n")
+
+letter = position[0].lower()
+abc = ["a", "b", "c"]
+letter_index = abc.index(letter)
+number_index = int(position[1]) - 1
+map[number_index][letter_index] = "X"
+
+print(f"{line1}\n{line2}\n{line3}")
+
+# Project: Rock Paper Scissors
+
+user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+
+computer_choice = random.randint(0, 2)
+print(f"Computer chose {computer_choice}")
+
+if user_choice >= 3 or user_choice < 0:
+    print("You typed an invalid number, you lose!")
+elif user_choice == 0 and computer_choice == 2:
+    print("You win!")
+elif computer_choice == 0 and user_choice == 2:
+    print("You lose")
+elif computer_choice > user_choice:
+    print("You lose")
+elif user_choice > computer_choice:
+    print("You win!")
+elif computer_choice == user_choice:
+    print("It's a draw")
+
+#Using the for loop with Python List
+
+fruits = ["Apple", "Peach", "Pear"]
+
+for fruit in fruits:
+    print(fruit)
+    print(fruit + " Pie")
+print(fruits)
+
+# [Interactive Coding Exercise] Average Height
+
+student_heights = input().split()
+for n in range(0, len(student_heights)):
+    student_heights[n] = int(student_heights[n])
+
+total_height = 0
+for height in student_heights:
+    total_height += height
+print(f"total height = {total_height}")
+
+number_of_students = 0
+for student in student_heights:
+    number_of_students += 1
+print(f"numbers of students = {number_of_students}")
+
+average_height = round(total_height / number_of_students)
+print(f"average height = {average_height}")
+
+# [Interactive Coding Exercise] High Score
+
+student_scores = input().split()
+for n in range(0, len(student_scores)):
+    student_scores[n] = int(student_scores[n])
+
+highest_score = 0
+for score in student_scores:
+    if score > highest_score:
+        highest_score = score
+
+print(f"The highest score in the class is :{highest_score}")
+
