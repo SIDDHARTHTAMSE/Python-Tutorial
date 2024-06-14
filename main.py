@@ -378,127 +378,239 @@ import random
 #     print("You fell into a hole. Game Over.")
 
 # Random Module
-
-import random
-random_integer = random.randint(1, 10)
-print(random_integer)
-
-random_float = random.random()
-print(random_float)
-
-love_score = random.randint(1, 100)
-print(f"Your love score is {love_score}")
-
-random_side = random.randint(0, 1)
-if random_side == 1:
-    print("Head")
-else:
-    print("Tail")
+#
+# import random
+# random_integer = random.randint(1, 10)
+# print(random_integer)
+#
+# random_float = random.random()
+# print(random_float)
+#
+# love_score = random.randint(1, 100)
+# print(f"Your love score is {love_score}")
+#
+# random_side = random.randint(0, 1)
+# if random_side == 1:
+#     print("Head")
+# else:
+#     print("Tail")
 
 # [Interactive Coding Exercise] Banker Roulette - Who will pay the bill?
 
-names_string = input("Enter the names your friends\n")
-names = names_string.split(", ")
-
-import random
-
-num_items = len(names)
-random_choice = random.randint(0, num_items-1)
-print(names[random_choice])
+# names_string = input("Enter the names your friends\n")
+# names = names_string.split(", ")
+#
+# import random
+#
+# num_items = len(names)
+# random_choice = random.randint(0, num_items-1)
+# print(names[random_choice])
 
 # IndexErrors and Working with Nested Lists
-
-fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
-vegetables = ["Spinach", "kale", "Tomatoes", "Celery", "Potatoes"]
-
-dirty_dozen = [fruits, vegetables]
-print(dirty_dozen)
+#
+# fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+# vegetables = ["Spinach", "kale", "Tomatoes", "Celery", "Potatoes"]
+#
+# dirty_dozen = [fruits, vegetables]
+# print(dirty_dozen)
 
 
 # Quiz
-fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
-vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
 
-dirty_dozen = [fruits, vegetables]
-
-print(dirty_dozen[1][1])
-
+# fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+# vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+#
+# dirty_dozen = [fruits, vegetables]
+#
+# print(dirty_dozen[1][1])
+#
 
 # [Interactive Coding Exercise] Treasure Map
 
-line1 = [" ", " ", " "]
-line2 = [" ", " ", " "]
-line3 = [" ", " ", " "]
-map = [line1, line2, line3]
-print("Hiding your treasure! x marks the spot.")
-position = input("Where do you want to put the treasure\n")
-
-letter = position[0].lower()
-abc = ["a", "b", "c"]
-letter_index = abc.index(letter)
-number_index = int(position[1]) - 1
-map[number_index][letter_index] = "X"
-
-print(f"{line1}\n{line2}\n{line3}")
+# line1 = [" ", " ", " "]
+# line2 = [" ", " ", " "]
+# line3 = [" ", " ", " "]
+# map = [line1, line2, line3]
+# print("Hiding your treasure! x marks the spot.")
+# position = input("Where do you want to put the treasure\n")
+#
+# letter = position[0].lower()
+# abc = ["a", "b", "c"]
+# letter_index = abc.index(letter)
+# number_index = int(position[1]) - 1
+# map[number_index][letter_index] = "X"
+#
+# print(f"{line1}\n{line2}\n{line3}")
 
 # Project: Rock Paper Scissors
 
-user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
-
-computer_choice = random.randint(0, 2)
-print(f"Computer chose {computer_choice}")
-
-if user_choice >= 3 or user_choice < 0:
-    print("You typed an invalid number, you lose!")
-elif user_choice == 0 and computer_choice == 2:
-    print("You win!")
-elif computer_choice == 0 and user_choice == 2:
-    print("You lose")
-elif computer_choice > user_choice:
-    print("You lose")
-elif user_choice > computer_choice:
-    print("You win!")
-elif computer_choice == user_choice:
-    print("It's a draw")
+# user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+#
+# computer_choice = random.randint(0, 2)
+# print(f"Computer chose {computer_choice}")
+#
+# if user_choice >= 3 or user_choice < 0:
+#     print("You typed an invalid number, you lose!")
+# elif user_choice == 0 and computer_choice == 2:
+#     print("You win!")
+# elif computer_choice == 0 and user_choice == 2:
+#     print("You lose")
+# elif computer_choice > user_choice:
+#     print("You lose")
+# elif user_choice > computer_choice:
+#     print("You win!")
+# elif computer_choice == user_choice:
+#     print("It's a draw")
 
 #Using the for loop with Python List
 
-fruits = ["Apple", "Peach", "Pear"]
-
-for fruit in fruits:
-    print(fruit)
-    print(fruit + " Pie")
-print(fruits)
+# fruits = ["Apple", "Peach", "Pear"]
+#
+# for fruit in fruits:
+#     print(fruit)
+#     print(fruit + " Pie")
+# print(fruits)
 
 # [Interactive Coding Exercise] Average Height
 
-student_heights = input().split()
-for n in range(0, len(student_heights)):
-    student_heights[n] = int(student_heights[n])
-
-total_height = 0
-for height in student_heights:
-    total_height += height
-print(f"total height = {total_height}")
-
-number_of_students = 0
-for student in student_heights:
-    number_of_students += 1
-print(f"numbers of students = {number_of_students}")
-
-average_height = round(total_height / number_of_students)
-print(f"average height = {average_height}")
+# student_heights = input().split()
+# for n in range(0, len(student_heights)):
+#     student_heights[n] = int(student_heights[n])
+#
+# total_height = 0
+# for height in student_heights:
+#     total_height += height
+# print(f"total height = {total_height}")
+#
+# number_of_students = 0
+# for student in student_heights:
+#     number_of_students += 1
+# print(f"numbers of students = {number_of_students}")
+#
+# average_height = round(total_height / number_of_students)
+# print(f"average height = {average_height}")
 
 # [Interactive Coding Exercise] High Score
 
-student_scores = input().split()
-for n in range(0, len(student_scores)):
-    student_scores[n] = int(student_scores[n])
+# student_scores = input().split()
+# for n in range(0, len(student_scores)):
+#     student_scores[n] = int(student_scores[n])
+#
+# highest_score = 0
+# for score in student_scores:
+#     if score > highest_score:
+#         highest_score = score
+#
+# print(f"The highest score in the class is :{highest_score}")
+#
 
-highest_score = 0
-for score in student_scores:
-    if score > highest_score:
-        highest_score = score
+# for loops and the range() function
+#
+for number in range(0, 101):
+    print(number)
 
-print(f"The highest score in the class is :{highest_score}")
 
+for number in range(0, 101, 2):
+    print(number)
+
+
+total = 0
+for number in range(1, 101):
+    total += number
+print(total)
+
+
+
+target = int(input("Enter the between 0 to 1000\n"))
+
+even_number = 0
+for number in range(2, target + 1, 2):
+    even_number += number
+print(even_number)
+
+# or
+
+alternative = 0
+for number in range(2, target+1):
+    if number % 2 == 0:
+        alternative += number
+print(alternative)
+
+# [Interactive Coding Exercise] The FizzBuzz Job Interview Question
+
+target = 100
+for number in range(1, target + 1):
+    if number % 3 == 0 and number % 5 == 0:
+        print("FizzBuzz")
+    elif number % 3 == 0:
+        print("Fizz")
+    elif number % 5 == 0:
+        print("Buzz")
+    else:
+        print(number)
+
+# Project: Create a Password Generator
+import random
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+           'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+           'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D',
+           'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
+           'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+
+print("Welcome to the PyPassword Generator")
+nr_letters = int(input("How many latters would you like in your password?\n"))
+nr_symbols = int(input("How many symbols would you like?\n"))
+nr_numbers = int(input("How many numbers would you like?\n"))
+
+# Easy Level
+
+password = ""
+for char in range(1, nr_letters + 1):
+    password += random.choice(letters)
+
+for char in range(1, nr_symbols + 1):
+    password += random.choice(symbols)
+
+for char in range(1, nr_numbers + 1):
+    password += random.choice(numbers)
+print(password)
+
+# Hard Level
+
+password_list = []
+
+for char in range(1, nr_letters + 1):
+    password_list.append(random.choice(letters))
+
+for char in range(1, nr_symbols + 1):
+    password_list += random.choice(symbols)
+
+for char in range(1, nr_numbers + 1):
+    password_list += random.choice(numbers)
+
+print(password_list)
+random.shuffle(password_list)
+print(password_list)
+
+password = ""
+for char in password_list:
+    password += char
+
+print(f"Your password is: {password}")
+
+# Defining and Calling Python Functions
+
+#
+def my_function():
+    print("Hello")
+    print("Bye")
+
+my_function()
+
+# The Hurdles Loop Challenge
+
+# Indentation in Python
+
+# While loop
