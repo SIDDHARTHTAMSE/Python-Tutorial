@@ -72,7 +72,7 @@ import random
 # True
 # False
 
-#
+
 # num_char = len(input("What is your name \n"))
 # print(type(num_char))
 #
@@ -89,7 +89,6 @@ import random
 
 # print(str(70) + str(100))
 
-
 # two_digit_number = input()
 #
 # first_digit = int(two_digit_number[0])
@@ -105,7 +104,7 @@ import random
 # **
 # */
 # +-
-
+#
 # height = input()
 # weight = input()
 #
@@ -120,7 +119,7 @@ import random
 #
 # bmi_as_int = int(bmi)
 # print(bmi_as_int)
-#
+
 
 # Number Manipulation and F Strings in Python
 # print(round(8/3, 3))
@@ -143,9 +142,9 @@ import random
 # age = input()
 # years = 90 - int(age)
 # weeks = years * 52
-# age = input()
 # print(f"you have {weeks} weeks left.")
-#
+
+# age = input()
 # years = 90 - int(age)
 # days = years * 365
 # print(F"You have total {days} days left in your life")
@@ -378,8 +377,8 @@ import random
 #     print("You fell into a hole. Game Over.")
 
 # Random Module
-#
-# import random
+
+import random
 # random_integer = random.randint(1, 10)
 # print(random_integer)
 #
@@ -472,7 +471,7 @@ import random
 # print(fruits)
 
 # [Interactive Coding Exercise] Average Height
-
+#
 # student_heights = input().split()
 # for n in range(0, len(student_heights)):
 #     student_heights[n] = int(student_heights[n])
@@ -482,6 +481,7 @@ import random
 #     total_height += height
 # print(f"total height = {total_height}")
 #
+#
 # number_of_students = 0
 # for student in student_heights:
 #     number_of_students += 1
@@ -489,6 +489,7 @@ import random
 #
 # average_height = round(total_height / number_of_students)
 # print(f"average height = {average_height}")
+
 
 # [Interactive Coding Exercise] High Score
 
@@ -506,111 +507,150 @@ import random
 
 # for loops and the range() function
 #
-for number in range(0, 101):
-    print(number)
+# for number in range(0, 101):
+#     print(number)
+#
+#
+# for number in range(0, 101, 2):
+#     print(number)
+#
+#
+# total = 0
+# for number in range(1, 101):
+#     total += number
+# print(total)
+#
 
 
-for number in range(0, 101, 2):
-    print(number)
-
-
-total = 0
-for number in range(1, 101):
-    total += number
-print(total)
-
-
-
-target = int(input("Enter the between 0 to 1000\n"))
-
-even_number = 0
-for number in range(2, target + 1, 2):
-    even_number += number
-print(even_number)
-
-# or
-
-alternative = 0
-for number in range(2, target+1):
-    if number % 2 == 0:
-        alternative += number
-print(alternative)
+# target = int(input("Enter the between 0 to 1000\n"))
+#
+# even_number = 0
+# for number in range(2, target + 1, 2):
+#     even_number += number
+# print(even_number)
+#
+# # or
+#
+# alternative = 0
+# for number in range(2, target+1):
+#     if number % 2 == 0:
+#         alternative += number
+# print(alternative)
 
 # [Interactive Coding Exercise] The FizzBuzz Job Interview Question
-
-target = 100
-for number in range(1, target + 1):
-    if number % 3 == 0 and number % 5 == 0:
-        print("FizzBuzz")
-    elif number % 3 == 0:
-        print("Fizz")
-    elif number % 5 == 0:
-        print("Buzz")
-    else:
-        print(number)
+#
+# target = 100
+# for number in range(1, target + 1):
+#     if number % 3 == 0 and number % 5 == 0:
+#         print("FizzBuzz")
+#     elif number % 3 == 0:
+#         print("Fizz")
+#     elif number % 5 == 0:
+#         print("Buzz")
+#     else:
+#         print(number)
 
 # Project: Create a Password Generator
-import random
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
-           'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
-           'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D',
-           'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
-           'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
-
-print("Welcome to the PyPassword Generator")
-nr_letters = int(input("How many latters would you like in your password?\n"))
-nr_symbols = int(input("How many symbols would you like?\n"))
-nr_numbers = int(input("How many numbers would you like?\n"))
-
+# import random
+# letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+#            'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+#            'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D',
+#            'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
+#            'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+# numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+# symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+#
+# print("Welcome to the PyPassword Generator")
+# nr_letters = int(input("How many latters would you like in your password?\n"))
+# nr_symbols = int(input("How many symbols would you like?\n"))
+# nr_numbers = int(input("How many numbers would you like?\n"))
+#
 # Easy Level
-
-password = ""
-for char in range(1, nr_letters + 1):
-    password += random.choice(letters)
-
-for char in range(1, nr_symbols + 1):
-    password += random.choice(symbols)
-
-for char in range(1, nr_numbers + 1):
-    password += random.choice(numbers)
-print(password)
-
+#
+# password = ""
+# for char in range(1, nr_letters + 1):
+#     password += random.choice(letters)
+#
+# for char in range(1, nr_symbols + 1):
+#     password += random.choice(symbols)
+#
+# for char in range(1, nr_numbers + 1):
+#     password += random.choice(numbers)
+# print(password)
+#
 # Hard Level
-
-password_list = []
-
-for char in range(1, nr_letters + 1):
-    password_list.append(random.choice(letters))
-
-for char in range(1, nr_symbols + 1):
-    password_list += random.choice(symbols)
-
-for char in range(1, nr_numbers + 1):
-    password_list += random.choice(numbers)
-
-print(password_list)
-random.shuffle(password_list)
-print(password_list)
-
-password = ""
-for char in password_list:
-    password += char
-
-print(f"Your password is: {password}")
+#
+# password_list = []
+#
+# for char in range(1, nr_letters + 1):
+#     password_list.append(random.choice(letters))
+#
+# for char in range(1, nr_symbols + 1):
+#     password_list += random.choice(symbols)
+#
+# for char in range(1, nr_numbers + 1):
+#     password_list += random.choice(numbers)
+#
+# print(password_list)
+# random.shuffle(password_list)
+# print(password_list)
+#
+# password = ""
+# for char in password_list:
+#     password += char
+#
+# print(f"Your password is: {password}")
 
 # Defining and Calling Python Functions
 
 #
-def my_function():
-    print("Hello")
-    print("Bye")
+# def my_function():
+#     print("Hello")
+#     print("Bye")
 
-my_function()
+# my_function()
 
 # The Hurdles Loop Challenge
 
 # Indentation in Python
 
 # While loop
+
+# How to Check the User's Answer
+
+import random
+end_of_game = False
+word_list = ["ardvark", "babbon", "camel"]
+chosen_word = random.choice(word_list)
+word_length = len(chosen_word)
+lives = 6
+
+# Testing code
+print(f'Pssst, the solution is {chosen_word}')
+
+display = []
+for _ in range(word_length):
+    display += "_"
+# print(display)
+
+
+while not end_of_game:
+    guess = input("Guess a letter: \n").lower()
+    for position in range(word_length):
+        letter = chosen_word[position]
+        # print(f"Current position: {position}\n"
+        #       f"Current letter: {letter}\n"
+        #       f"Guessed letter: {guess}")
+        if letter == guess:
+            display[position] = letter
+    if guess not in chosen_word:
+        lives -= 1
+        if lives == 0:
+            end_of_game = True
+            print("You lose.")
+
+    print(f"{' '.join(display)}")
+
+    if "_" not in display:
+        end_of_game = True
+        print("You win.")
