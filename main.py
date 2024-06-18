@@ -6,6 +6,7 @@
 # print("Hello World!\nHello world!\nHello World!")
 # print("Hello" + "Sid")
 # print("Hello" + " " +"Sid")
+import math
 import random
 
 #what is syntax error and indentation error
@@ -620,10 +621,13 @@ import random
 
 import random
 end_of_game = False
-word_list = ["ardvark", "babbon", "camel"]
+from hangman_words import word_list
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 lives = 6
+
+from hangman_art import logo
+print(logo)
 
 # Testing code
 print(f'Pssst, the solution is {chosen_word}')
@@ -636,6 +640,8 @@ for _ in range(word_length):
 
 while not end_of_game:
     guess = input("Guess a letter: \n").lower()
+    if guess in display:
+        print(f"You have already guessed {guess}")
     for position in range(word_length):
         letter = chosen_word[position]
         # print(f"Current position: {position}\n"
@@ -644,6 +650,7 @@ while not end_of_game:
         if letter == guess:
             display[position] = letter
     if guess not in chosen_word:
+        print(f"You guessed {guess}, that is not in the word. You lose a life.")
         lives -= 1
         if lives == 0:
             end_of_game = True
@@ -654,3 +661,125 @@ while not end_of_game:
     if "_" not in display:
         end_of_game = True
         print("You win.")
+
+    from hangman_art import stages
+    print(stages[lives])
+
+# Functions with Inputs
+
+
+def greet():
+    print("Hello")
+    print("How do you do?")
+    print("Isn't the weather nice today?")
+
+
+greet()
+
+# Function that allows for input
+
+
+def greet_with_name(name):
+    print(f"Hello {name}")
+    print(f"How do you do {name}")
+
+
+greet_with_name("Manju")
+
+#Positional vs. Keyword Arguments
+
+#Function with more than 1 input
+
+
+def greet_with(name, location):
+    print(f"Hello {name}")
+    print(f"What is it like in {location}")
+
+
+greet_with("Sid", "Karwar")
+
+# Function with keyword arguments
+
+
+def greet_with(name, location):
+    print(f"Hello {name}")
+    print(f"What is it like in {location}")
+
+
+greet_with(name="Sid", location="Karwar")
+
+# Paint Area Calculator
+
+import math
+
+
+def paint_calc(height, width, cover):
+    num_cans = (height * width) / cover
+    round_up_cans = math.ceil(num_cans)
+    print(f"You'll need {round_up_cans} cans of paint.")
+
+
+test_h = int(input("Enter your height of wall\n"))
+test_w = int(input("Enter your width of wall\n"))
+coverage = 5
+
+paint_calc(height=test_h, width=test_w, cover=coverage)
+
+# Prime Number Checker
+
+
+def prime_checker(number):
+    is_prime = True
+    for i in range(2, number):
+        if number % i == 0:
+            is_prime = False
+    if is_prime:
+        print("It's a prime number.")
+    else:
+        print("It's not a prime number.")
+
+
+n = int(input("Check this number\n"))
+prime_checker(number=n)
+
+# Encryption
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f',
+            'g', 'h', 'i', 'j', 'k', 'l',
+            'm', 'n', 'o', 'p', 'q', 'r',
+            's', 't', 'u', 'v', 'w', 'x',
+            'y', 'z','a', 'b', 'c', 'd',
+            'e', 'f','g', 'h', 'i', 'j',
+            'k', 'l','m', 'n', 'o', 'p',
+            'q', 'r','s', 't', 'u', 'v',
+            'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+
+def encrypt(plain_text, shift_amount):
+    cipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        new_position = position + shift_amount
+        new_letter = alphabet[new_position]
+        cipher_text += new_letter
+    print(f"The encoded text is {cipher_text}")
+
+
+def decrypt(cipher_text, shift_amount):
+    plain_text = ""
+    for letter in cipher_text:
+        position = alphabet.index(letter)
+        new_position = position - shift_amount
+        plain_text += alphabet[new_position]
+    print(f"The decode text is {plain_text}")
+
+
+if direction == "encode":
+    encrypt(plain_text=text, shift_amount=shift)
+else:
+    decrypt(cipher_text=text, shift_amount=shift)
+
