@@ -18,6 +18,7 @@ import random
 #
 # print("Hello " + input("What is your name?"))
 
+
 # Comment the code
 
 #[Interactive Coding Exercise] Input Function
@@ -25,8 +26,7 @@ import random
 # nameofletters = len("Siddharth")
 # print(nameofletters)
 #
-# print(len(input()))
-
+# print(len(input("Enter your name\n")))
 
 
 # Python Variables
@@ -40,14 +40,15 @@ import random
 #
 # name = "manju"
 # print(name)
+
 #
 # name = input("What is your name?")
 # length = len(name)
 # print(length)
-#
+
 # city = input("what is your city name\n")
 # pet = input("What is your pet name\n")
-# print("City name is "+city+" and pet name is
+# print("City name is "+city+" and pet name is "+pet)
 
 # print(len(input("What is Your name ? \n")))
 
@@ -85,6 +86,7 @@ import random
 # num_char = len(input("What is your name \n"))
 # new_num_char = str(num_char)
 # print("My name has "+new_num_char+" characters")
+
 
 # print(70 + float("100.5"))
 
@@ -130,6 +132,7 @@ import random
 # score = 0
 # height = 1.8
 # isWinning = True
+
 #
 # # f-String
 # print(f"Your score is {score},"
@@ -144,6 +147,7 @@ import random
 # years = 90 - int(age)
 # weeks = years * 52
 # print(f"you have {weeks} weeks left.")
+
 
 # age = input()
 # years = 90 - int(age)
@@ -165,6 +169,7 @@ import random
 # final_amount = round(bill_per_person, 2)
 # final_amount1 = "{:.2f}".format(bill_per_person)
 # print(f"Each person should pay {final_amount1}")
+
 #
 # Control Flow with if / else and Conditional Operators
 #
@@ -175,6 +180,7 @@ import random
 #     print("You can ride the rollercoaster")
 # else:
 #     print("Sorry, you have to grow taller before you can ride.")
+
 #
 # Odd and Even
 #
@@ -200,6 +206,18 @@ import random
 # else:
 #     print("Sorry, You have to grow taller before you can ride.")
 #
+# print("Election voting")
+# age = int(input("Enter your age\n"))
+# voting_card = input("Do you have voting card? Yes or No\n").lower()
+# if age >= 18:
+#     print("You are elegible for vote")
+#     if voting_card == "yes":
+#         print("Now you can vote")
+#     else:
+#         print("You cant vote now")
+# else:
+#     print("You are not elegible for vote")
+
 #
 #
 #
@@ -232,6 +250,31 @@ import random
 #     print(f"Your BMI is {bmi}, you are obese")
 # else:
 #     print(f"Your BMI is {bmi}, you are clinically obese.")
+
+# print("Result")
+# marks = int(input("Enter your marks\n"))
+# total_marks = (marks/625)*100
+# if total_marks > 80 and total_marks < 100:
+#     print("Disctinction")
+# elif total_marks > 60 and total_marks < 79:
+#     print("First class")
+# elif total_marks > 40 and total_marks < 59:
+#     print("Second class")
+# else:
+#     print("Fail")
+
+# student_marks = int(input("Enter your marks\n"))
+# total_marks = (student_marks/625) * 100
+# if total_marks >= 80:
+#     print("Distinction")
+# elif total_marks >= 60:
+#     print("First class")
+# elif total_marks >= 45:
+#     print("Second class")
+# elif total_marks >= 35:
+#     print("Just pass")
+# else:
+#     print("Fail")
 
 # Leap year or not
 #
@@ -410,7 +453,7 @@ import random
 #
 # fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
 # vegetables = ["Spinach", "kale", "Tomatoes", "Celery", "Potatoes"]
-#
+
 # dirty_dozen = [fruits, vegetables]
 # print(dirty_dozen)
 
@@ -470,6 +513,9 @@ import random
 #     print(fruit)
 #     print(fruit + " Pie")
 # print(fruits)
+# element = ["Sid", "Manju", "Akansha", "Arpita"]
+# for names in element:
+#     print(names)
 
 # [Interactive Coding Exercise] Average Height
 #
@@ -619,139 +665,181 @@ import random
 
 # How to Check the User's Answer
 
-import random
-end_of_game = False
-from hangman_words import word_list
-chosen_word = random.choice(word_list)
-word_length = len(chosen_word)
-lives = 6
-
-from hangman_art import logo
-print(logo)
-
-# Testing code
-print(f'Pssst, the solution is {chosen_word}')
-
-display = []
-for _ in range(word_length):
-    display += "_"
-# print(display)
-
-
-while not end_of_game:
-    guess = input("Guess a letter: \n").lower()
-    if guess in display:
-        print(f"You have already guessed {guess}")
-    for position in range(word_length):
-        letter = chosen_word[position]
-        # print(f"Current position: {position}\n"
-        #       f"Current letter: {letter}\n"
-        #       f"Guessed letter: {guess}")
-        if letter == guess:
-            display[position] = letter
-    if guess not in chosen_word:
-        print(f"You guessed {guess}, that is not in the word. You lose a life.")
-        lives -= 1
-        if lives == 0:
-            end_of_game = True
-            print("You lose.")
-
-    print(f"{' '.join(display)}")
-
-    if "_" not in display:
-        end_of_game = True
-        print("You win.")
-
-    from hangman_art import stages
-    print(stages[lives])
+# import random
+# end_of_game = False
+# from hangman_words import word_list
+# chosen_word = random.choice(word_list)
+# word_length = len(chosen_word)
+# lives = 6
+#
+# from hangman_art import logo
+# print(logo)
+#
+# # Testing code
+# print(f'Pssst, the solution is {chosen_word}')
+#
+# display = []
+# for _ in range(word_length):
+#     display += "_"
+# # print(display)
+#
+#
+# while not end_of_game:
+#     guess = input("Guess a letter: \n").lower()
+#     if guess in display:
+#         print(f"You have already guessed {guess}")
+#     for position in range(word_length):
+#         letter = chosen_word[position]
+#         # print(f"Current position: {position}\n"
+#         #       f"Current letter: {letter}\n"
+#         #       f"Guessed letter: {guess}")
+#         if letter == guess:
+#             display[position] = letter
+#     if guess not in chosen_word:
+#         print(f"You guessed {guess}, that is not in the word. You lose a life.")
+#         lives -= 1
+#         if lives == 0:
+#             end_of_game = True
+#             print("You lose.")
+#
+#     print(f"{' '.join(display)}")
+#
+#     if "_" not in display:
+#         end_of_game = True
+#         print("You win.")
+#
+#     from hangman_art import stages
+#     print(stages[lives])
 
 # Functions with Inputs
 
 
-def greet():
-    print("Hello")
-    print("How do you do?")
-    print("Isn't the weather nice today?")
-
-
-greet()
+# def greet():
+#     print("Hello")
+#     print("How do you do?")
+#     print("Isn't the weather nice today?")
+#
+#
+# greet()
 
 # Function that allows for input
 
 
-def greet_with_name(name):
-    print(f"Hello {name}")
-    print(f"How do you do {name}")
-
-
-greet_with_name("Manju")
+# def greet_with_name(name):
+#     print(f"Hello {name}")
+#     print(f"How do you do {name}")
+#
+#
+# greet_with_name("Manju")
 
 #Positional vs. Keyword Arguments
 
 #Function with more than 1 input
 
 
-def greet_with(name, location):
-    print(f"Hello {name}")
-    print(f"What is it like in {location}")
-
-
-greet_with("Sid", "Karwar")
+# def greet_with(name, location):
+#     print(f"Hello {name}")
+#     print(f"What is it like in {location}")
+#
+#
+# greet_with("Sid", "Karwar")
 
 # Function with keyword arguments
 
 
-def greet_with(name, location):
-    print(f"Hello {name}")
-    print(f"What is it like in {location}")
-
-
-greet_with(name="Sid", location="Karwar")
+# def greet_with(name, location):
+#     print(f"Hello {name}")
+#     print(f"What is it like in {location}")
+#
+#
+# greet_with(name="Sid", location="Karwar")
 
 # Paint Area Calculator
-
-import math
-
-
-def paint_calc(height, width, cover):
-    num_cans = (height * width) / cover
-    round_up_cans = math.ceil(num_cans)
-    print(f"You'll need {round_up_cans} cans of paint.")
-
-
-test_h = int(input("Enter your height of wall\n"))
-test_w = int(input("Enter your width of wall\n"))
-coverage = 5
-
-paint_calc(height=test_h, width=test_w, cover=coverage)
+#
+# import math
+#
+#
+# def paint_calc(height, width, cover):
+#     num_cans = (height * width) / cover
+#     round_up_cans = math.ceil(num_cans)
+#     print(f"You'll need {round_up_cans} cans of paint.")
+#
+#
+# test_h = int(input("Enter your height of wall\n"))
+# test_w = int(input("Enter your width of wall\n"))
+# coverage = 5
+#
+# paint_calc(height=test_h, width=test_w, cover=coverage)
 
 # Prime Number Checker
 
 
-def prime_checker(number):
-    is_prime = True
-    for i in range(2, number):
-        if number % i == 0:
-            is_prime = False
-    if is_prime:
-        print("It's a prime number.")
-    else:
-        print("It's not a prime number.")
-
-
-n = int(input("Check this number\n"))
-prime_checker(number=n)
+# def prime_checker(number):
+#     is_prime = True
+#     for i in range(2, number):
+#         if number % i == 0:
+#             is_prime = False
+#     if is_prime:
+#         print("It's a prime number.")
+#     else:
+#         print("It's not a prime number.")
+#
+#
+# n = int(input("Check this number\n"))
+# prime_checker(number=n)
 
 # Encryption
+
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f',
+#             'g', 'h', 'i', 'j', 'k', 'l',
+#             'm', 'n', 'o', 'p', 'q', 'r',
+#             's', 't', 'u', 'v', 'w', 'x',
+#             'y', 'z', 'a', 'b', 'c', 'd',
+#             'e', 'f', 'g', 'h', 'i', 'j',
+#             'k', 'l', 'm', 'n', 'o', 'p',
+#             'q', 'r', 's', 't', 'u', 'v',
+#             'w', 'x', 'y', 'z']
+#
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
+#
+#
+# def encrypt(plain_text, shift_amount):
+#     cipher_text = ""
+#     for letter in plain_text:
+#         position = alphabet.index(letter)
+#         new_position = position + shift_amount
+#         new_letter = alphabet[new_position]
+#         cipher_text += new_letter
+#     print(f"The encoded text is {cipher_text}")
+#
+#
+# def decrypt(cipher_text, shift_amount):
+#     plain_text = ""
+#     for letter in cipher_text:
+#         position = alphabet.index(letter)
+#         new_position = position - shift_amount
+#         plain_text += alphabet[new_position]
+#     print(f"The decode text is {plain_text}")
+#
+#
+# if direction == "encode":
+#     encrypt(plain_text=text, shift_amount=shift)
+# else:
+#     decrypt(cipher_text=text, shift_amount=shift)
+
+
+# Reorganising our Code
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f',
             'g', 'h', 'i', 'j', 'k', 'l',
             'm', 'n', 'o', 'p', 'q', 'r',
             's', 't', 'u', 'v', 'w', 'x',
-            'y', 'z','a', 'b', 'c', 'd',
-            'e', 'f','g', 'h', 'i', 'j',
-            'k', 'l','m', 'n', 'o', 'p',
-            'q', 'r','s', 't', 'u', 'v',
+            'y', 'z', 'a', 'b', 'c', 'd',
+            'e', 'f', 'g', 'h', 'i', 'j',
+            'k', 'l', 'm', 'n', 'o', 'p',
+            'q', 'r', 's', 't', 'u', 'v',
             'w', 'x', 'y', 'z']
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
@@ -759,27 +847,15 @@ text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
 
-def encrypt(plain_text, shift_amount):
-    cipher_text = ""
-    for letter in plain_text:
+def caesar(start_text, shift_amount, cipher_direction):
+    end_text = ""
+    if cipher_direction == "decode":
+        shift_amount *= -1
+    for letter in start_text:
         position = alphabet.index(letter)
         new_position = position + shift_amount
-        new_letter = alphabet[new_position]
-        cipher_text += new_letter
-    print(f"The encoded text is {cipher_text}")
+        end_text += alphabet[new_position]
+    print(f"Here's the {direction}d result: {end_text}")
 
 
-def decrypt(cipher_text, shift_amount):
-    plain_text = ""
-    for letter in cipher_text:
-        position = alphabet.index(letter)
-        new_position = position - shift_amount
-        plain_text += alphabet[new_position]
-    print(f"The decode text is {plain_text}")
-
-
-if direction == "encode":
-    encrypt(plain_text=text, shift_amount=shift)
-else:
-    decrypt(cipher_text=text, shift_amount=shift)
-
+caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
