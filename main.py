@@ -832,6 +832,10 @@ import random
 
 # Reorganising our Code
 
+from art import logo
+print(logo)
+
+
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f',
             'g', 'h', 'i', 'j', 'k', 'l',
             'm', 'n', 'o', 'p', 'q', 'r',
@@ -842,20 +846,64 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f',
             'q', 'r', 's', 't', 'u', 'v',
             'w', 'x', 'y', 'z']
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
-
 
 def caesar(start_text, shift_amount, cipher_direction):
     end_text = ""
     if cipher_direction == "decode":
         shift_amount *= -1
-    for letter in start_text:
-        position = alphabet.index(letter)
-        new_position = position + shift_amount
-        end_text += alphabet[new_position]
+    for char in start_text:
+        if char in alphabet:
+            position = alphabet.index(char)
+            new_position = position + shift_amount
+            end_text += alphabet[new_position]
+        else:
+            end_text += char
     print(f"Here's the {direction}d result: {end_text}")
 
 
-caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
+should_continue = True
+while should_continue:
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+
+    shift = shift % 26
+    caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
+    result = input("Type 'yes' if you want to go again. Otherwise type 'no' .\n")
+    if result == "no":
+        should_continue = False
+        print("Goodbye")
+
+#The Python Dictionary: Deep Dive
+
+programming_dictionary = {
+    "Bug": "An error in a program that prevents the program from running as expected.",
+    "Function": "A piece of code that you can easily call over and over again",
+    "Loop": "The action of doing something over and over again"
+}
+
+print(programming_dictionary["Bug"])
+
+# Empty dictionary
+
+empty_dictionary = {}
+
+# Wipe an existing dictionary
+
+programming_dictionary = {}
+print(programming_dictionary)
+
+#Edit an item in a dictionary
+
+programming_dictionary["Bug"] = "A month in your computer."
+print(programming_dictionary)
+
+# Loop through a dictionary
+
+for thing in programming_dictionary:
+    print(thing)
+
+for key in programming_dictionary:
+    print(key)
+    print(programming_dictionary[key])
+
