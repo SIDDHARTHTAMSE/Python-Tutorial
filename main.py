@@ -832,78 +832,260 @@ import random
 
 # Reorganising our Code
 
-from art import logo
-print(logo)
-
-
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f',
-            'g', 'h', 'i', 'j', 'k', 'l',
-            'm', 'n', 'o', 'p', 'q', 'r',
-            's', 't', 'u', 'v', 'w', 'x',
-            'y', 'z', 'a', 'b', 'c', 'd',
-            'e', 'f', 'g', 'h', 'i', 'j',
-            'k', 'l', 'm', 'n', 'o', 'p',
-            'q', 'r', 's', 't', 'u', 'v',
-            'w', 'x', 'y', 'z']
-
-
-def caesar(start_text, shift_amount, cipher_direction):
-    end_text = ""
-    if cipher_direction == "decode":
-        shift_amount *= -1
-    for char in start_text:
-        if char in alphabet:
-            position = alphabet.index(char)
-            new_position = position + shift_amount
-            end_text += alphabet[new_position]
-        else:
-            end_text += char
-    print(f"Here's the {direction}d result: {end_text}")
-
-
-should_continue = True
-while should_continue:
-    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
-
-    shift = shift % 26
-    caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
-    result = input("Type 'yes' if you want to go again. Otherwise type 'no' .\n")
-    if result == "no":
-        should_continue = False
-        print("Goodbye")
+# from art import logo
+# print(logo)
+#
+#
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f',
+#             'g', 'h', 'i', 'j', 'k', 'l',
+#             'm', 'n', 'o', 'p', 'q', 'r',
+#             's', 't', 'u', 'v', 'w', 'x',
+#             'y', 'z', 'a', 'b', 'c', 'd',
+#             'e', 'f', 'g', 'h', 'i', 'j',
+#             'k', 'l', 'm', 'n', 'o', 'p',
+#             'q', 'r', 's', 't', 'u', 'v',
+#             'w', 'x', 'y', 'z']
+#
+#
+# def caesar(start_text, shift_amount, cipher_direction):
+#     end_text = ""
+#     if cipher_direction == "decode":
+#         shift_amount *= -1
+#     for char in start_text:
+#         if char in alphabet:
+#             position = alphabet.index(char)
+#             new_position = position + shift_amount
+#             end_text += alphabet[new_position]
+#         else:
+#             end_text += char
+#     print(f"Here's the {direction}d result: {end_text}")
+#
+#
+# should_continue = True
+# while should_continue:
+#     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+#     text = input("Type your message:\n").lower()
+#     shift = int(input("Type the shift number:\n"))
+#
+#     shift = shift % 26
+#     caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
+#     result = input("Type 'yes' if you want to go again. Otherwise type 'no' .\n")
+#     if result == "no":
+#         should_continue = False
+#         print("Goodbye")
 
 #The Python Dictionary: Deep Dive
 
-programming_dictionary = {
-    "Bug": "An error in a program that prevents the program from running as expected.",
-    "Function": "A piece of code that you can easily call over and over again",
-    "Loop": "The action of doing something over and over again"
-}
-
-print(programming_dictionary["Bug"])
+# programming_dictionary = {
+#     "Bug": "An error in a program that prevents the program from running as expected.",
+#     "Function": "A piece of code that you can easily call over and over again",
+#     "Loop": "The action of doing something over and over again"
+# }
+#
+# print(programming_dictionary["Bug"])
 
 # Empty dictionary
 
-empty_dictionary = {}
+# empty_dictionary = {}
 
 # Wipe an existing dictionary
 
-programming_dictionary = {}
-print(programming_dictionary)
+# programming_dictionary = {}
+# print(programming_dictionary)
 
 #Edit an item in a dictionary
 
-programming_dictionary["Bug"] = "A month in your computer."
-print(programming_dictionary)
+# programming_dictionary["Bug"] = "A month in your computer."
+# print(programming_dictionary)
 
 # Loop through a dictionary
 
-for thing in programming_dictionary:
-    print(thing)
+# for thing in programming_dictionary:
+#     print(thing)
+#
+# for key in programming_dictionary:
+#     print(key)
+#     print(programming_dictionary[key])
 
-for key in programming_dictionary:
-    print(key)
-    print(programming_dictionary[key])
+prog_dictionary = {
+    "sid": "This message from sid",
+    "Tamse":"This is my surname",
+    "Address": "This is my address",
+}
 
+print(prog_dictionary["sid"])
+for item in prog_dictionary:
+    print(item)
+    print(prog_dictionary[item])
+
+prog_dictionary["sid"] = "My name is sid"
+print(prog_dictionary)
+
+# [Interactive Coding Exercise] Grading Program
+
+student_score = {
+    "Harry": 81,
+    "Ron": 78,
+    "Hermione": 99,
+    "Draco": 74,
+    "Neville": 62,
+}
+student_grade = {}
+
+for student in student_score:
+    score = student_score[student]
+    if score > 90:
+        student_grade[student] = "Outstanding"
+    elif score > 80:
+        student_grade[student] = "Exceeds Expectations"
+    elif score > 70:
+        student_grade[student] = "Acceptable"
+    else:
+        student_grade[student] = "Fail"
+print(student_grade)
+
+
+# program
+
+name_student = {
+    "first_name": "",
+    "middle_name": "",
+    "last_name": "",
+    "id": 1
+}
+
+name_student1 = {}
+
+for name in name_student:
+    if name == "first_name":
+        name_student1[name] = "Siddharth"
+    elif name == "middle_name":
+        name_student1[name] = "Shripad"
+    elif name == "last_name":
+        name_student1[name] = "Tamse"
+    elif name == 1:
+        name_student1[name] = 2
+print(name_student1)
+
+# Nesting Lists and Dictionaries
+
+travel_log = {
+    "France": {
+        "cities_visited": [
+            "Paris",
+            "Lille",
+            "Dijon"
+        ],
+        "total_visits": 12
+    },
+    "Germany": {
+        "cities_visited": [
+            "Berlin",
+            "Hamburg",
+            "Stuttgart"
+        ],
+        "total_visits": 5
+    },
+}
+
+
+travel_logs = [
+    {
+        "country": "France",
+        "cities_visited": [
+            "Paris",
+            "Lille",
+            "Dijon"
+        ],
+        "total_visits": 12
+    },
+    {
+        "country": "Germany",
+        "cities_visited": [
+            "Berlin",
+            "Hamburg",
+            "Stuttgart"
+        ],
+        "total_visits": 5
+    }
+]
+
+# [Interactive Coding Exercise] Dictionary in List
+
+country = input("Add country name\n")
+visits = int(input("Number of visits\n"))
+list_of_cities = eval(input("create list from formatted string\n"))
+travel_log = [
+    {
+        "country": "France",
+        "visits": 12,
+        "cities": ["Paris", "Lille", "Dijon"]
+    },
+    {
+        "country": "Germany",
+        "visits": 5,
+        "cities": ["Berlin", "Hamburg", "Stuttgart"]
+    },
+]
+
+
+def add_new_country(name, time_visited, cities_visited):
+    new_country = {}
+    new_country["country"] = name
+    new_country["visits"] = time_visited
+    new_country["cities"] = cities_visited
+    travel_log.append(new_country)
+
+
+add_new_country(name=country, time_visited=visits, cities_visited=list_of_cities)
+print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
+print(f"My favorites city was {travel_log[2]['cities'][0]}")
+
+# Simple Example
+
+country = input("Add country name\n")
+visits = int(input("Number of visits\n"))
+list_of_cities = eval(input("create list from formatted string\n"))
+
+
+def add_new_country(name, time_visited, cities_visited):
+    new_country = {}
+    new_country["country"] = name
+    new_country["visits"] = time_visited
+    new_country["cities"] = cities_visited
+    print(new_country)
+
+
+add_new_country(name=country, time_visited=visits, cities_visited=list_of_cities)
+
+# Solution and Complete Code for the Secret Auction Program
+
+from replit import clear
+from art import logo
+print(logo)
+
+bids = {}
+bidding_finished = False
+
+
+def find_highest_bidder(bidding_record):
+    highest_bid = 0
+    winner = ""
+    for bidder in bidding_record:
+        bid_amount = bidding_record[bidder]
+        if bid_amount > highest_bid:
+            highest_bid = bid_amount
+            winner = bidder
+    print(f"The winner is {winner} with a bid of ${highest_bid}")
+
+
+while not bidding_finished:
+    name = input("What is your name\n")
+    price = int(input("What is  your bid $\n"))
+    bids[name] = price
+    should_continue = input("Are there any other bidders? Type 'yes' or 'no'.\n")
+    if should_continue == "no":
+        bidding_finished = True
+        find_highest_bidder(bids)
+    elif should_continue == "yes":
+        clear()
