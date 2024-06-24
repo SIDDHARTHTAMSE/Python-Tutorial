@@ -874,14 +874,14 @@ import random
 #         should_continue = False
 #         print("Goodbye")
 
-#The Python Dictionary: Deep Dive
+# The Python Dictionary: Deep Dive
 
 # programming_dictionary = {
 #     "Bug": "An error in a program that prevents the program from running as expected.",
 #     "Function": "A piece of code that you can easily call over and over again",
 #     "Loop": "The action of doing something over and over again"
 # }
-#
+
 # print(programming_dictionary["Bug"])
 
 # Empty dictionary
@@ -893,7 +893,7 @@ import random
 # programming_dictionary = {}
 # print(programming_dictionary)
 
-#Edit an item in a dictionary
+# Edit an item in a dictionary
 
 # programming_dictionary["Bug"] = "A month in your computer."
 # print(programming_dictionary)
@@ -906,186 +906,362 @@ import random
 # for key in programming_dictionary:
 #     print(key)
 #     print(programming_dictionary[key])
-
-prog_dictionary = {
-    "sid": "This message from sid",
-    "Tamse":"This is my surname",
-    "Address": "This is my address",
-}
-
-print(prog_dictionary["sid"])
-for item in prog_dictionary:
-    print(item)
-    print(prog_dictionary[item])
-
-prog_dictionary["sid"] = "My name is sid"
-print(prog_dictionary)
+#
+# prog_dictionary = {
+#     "sid": "This message from sid",
+#     "Tamse": "This is my surname",
+#     "Address": "This is my address",
+# }
+#
+# print(prog_dictionary["sid"])
+#
+# for item in prog_dictionary:
+#     print(item)
+#     print(prog_dictionary[item])
+#
+# prog_dictionary["sid"] = "My name is sid"
+# print(prog_dictionary)
 
 # [Interactive Coding Exercise] Grading Program
 
-student_score = {
-    "Harry": 81,
-    "Ron": 78,
-    "Hermione": 99,
-    "Draco": 74,
-    "Neville": 62,
-}
-student_grade = {}
-
-for student in student_score:
-    score = student_score[student]
-    if score > 90:
-        student_grade[student] = "Outstanding"
-    elif score > 80:
-        student_grade[student] = "Exceeds Expectations"
-    elif score > 70:
-        student_grade[student] = "Acceptable"
-    else:
-        student_grade[student] = "Fail"
-print(student_grade)
-
+# student_score = {
+#     "Harry": 81,
+#     "Ron": 78,
+#     "Hermione": 99,
+#     "Draco": 74,
+#     "Neville": 62,
+# }
+# student_grade = {}
+#
+# for student in student_score:
+#     score = student_score[student]
+#     if score > 90:
+#         student_grade[student] = "Outstanding"
+#     elif score > 80:
+#         student_grade[student] = "Exceeds Expectations"
+#     elif score > 70:
+#         student_grade[student] = "Acceptable"
+#     else:
+#         student_grade[student] = "Fail"
+# print(student_grade)
+#
 
 # program
 
-name_student = {
-    "first_name": "",
-    "middle_name": "",
-    "last_name": "",
-    "id": 1
-}
-
-name_student1 = {}
-
-for name in name_student:
-    if name == "first_name":
-        name_student1[name] = "Siddharth"
-    elif name == "middle_name":
-        name_student1[name] = "Shripad"
-    elif name == "last_name":
-        name_student1[name] = "Tamse"
-    elif name == 1:
-        name_student1[name] = 2
-print(name_student1)
+# name_student = {
+#     "first_name": "",
+#     "middle_name": "",
+#     "last_name": "",
+#     "id": 1
+# }
+#
+# name_student1 = {}
+#
+# for name in name_student:
+#     if name == "first_name":
+#         name_student1[name] = "Siddharth"
+#     elif name == "middle_name":
+#         name_student1[name] = "Shripad"
+#     elif name == "last_name":
+#         name_student1[name] = "Tamse"
+#     elif name == 1:
+#         name_student1[name] = 2
+# print(name_student1)
 
 # Nesting Lists and Dictionaries
 
-travel_log = {
-    "France": {
-        "cities_visited": [
-            "Paris",
-            "Lille",
-            "Dijon"
-        ],
-        "total_visits": 12
-    },
-    "Germany": {
-        "cities_visited": [
-            "Berlin",
-            "Hamburg",
-            "Stuttgart"
-        ],
-        "total_visits": 5
-    },
-}
-
-
-travel_logs = [
-    {
-        "country": "France",
-        "cities_visited": [
-            "Paris",
-            "Lille",
-            "Dijon"
-        ],
-        "total_visits": 12
-    },
-    {
-        "country": "Germany",
-        "cities_visited": [
-            "Berlin",
-            "Hamburg",
-            "Stuttgart"
-        ],
-        "total_visits": 5
-    }
-]
+# travel_log = {
+#     "France": {
+#         "cities_visited": [
+#             "Paris",
+#             "Lille",
+#             "Dijon"
+#         ],
+#         "total_visits": 12
+#     },
+#     "Germany": {
+#         "cities_visited": [
+#             "Berlin",
+#             "Hamburg",
+#             "Stuttgart"
+#         ],
+#         "total_visits": 5
+#     },
+# }
+#
+#
+# travel_logs = [
+#     {
+#         "country": "France",
+#         "cities_visited": [
+#             "Paris",
+#             "Lille",
+#             "Dijon"
+#         ],
+#         "total_visits": 12
+#     },
+#     {
+#         "country": "Germany",
+#         "cities_visited": [
+#             "Berlin",
+#             "Hamburg",
+#             "Stuttgart"
+#         ],
+#         "total_visits": 5
+#     }
+# ]
 
 # [Interactive Coding Exercise] Dictionary in List
 
-country = input("Add country name\n")
-visits = int(input("Number of visits\n"))
-list_of_cities = eval(input("create list from formatted string\n"))
-travel_log = [
-    {
-        "country": "France",
-        "visits": 12,
-        "cities": ["Paris", "Lille", "Dijon"]
-    },
-    {
-        "country": "Germany",
-        "visits": 5,
-        "cities": ["Berlin", "Hamburg", "Stuttgart"]
-    },
-]
-
-
-def add_new_country(name, time_visited, cities_visited):
-    new_country = {}
-    new_country["country"] = name
-    new_country["visits"] = time_visited
-    new_country["cities"] = cities_visited
-    travel_log.append(new_country)
-
-
-add_new_country(name=country, time_visited=visits, cities_visited=list_of_cities)
-print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
-print(f"My favorites city was {travel_log[2]['cities'][0]}")
+# country = input("Add country name\n")
+# visits = int(input("Number of visits\n"))
+# list_of_cities = eval(input("create list from formatted string\n"))
+# travel_log = [
+#     {
+#         "country": "France",
+#         "visits": 12,
+#         "cities": ["Paris", "Lille", "Dijon"]
+#     },
+#     {
+#         "country": "Germany",
+#         "visits": 5,
+#         "cities": ["Berlin", "Hamburg", "Stuttgart"]
+#     },
+# ]
+#
+#
+# def add_new_country(name, time_visited, cities_visited):
+#     new_country = {}
+#     new_country["country"] = name
+#     new_country["visits"] = time_visited
+#     new_country["cities"] = cities_visited
+#     travel_log.append(new_country)
+#
+#
+# add_new_country(name=country, time_visited=visits, cities_visited=list_of_cities)
+# print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
+# print(f"My favorites city was {travel_log[2]['cities'][0]}")
 
 # Simple Example
 
-country = input("Add country name\n")
-visits = int(input("Number of visits\n"))
-list_of_cities = eval(input("create list from formatted string\n"))
-
-
-def add_new_country(name, time_visited, cities_visited):
-    new_country = {}
-    new_country["country"] = name
-    new_country["visits"] = time_visited
-    new_country["cities"] = cities_visited
-    print(new_country)
-
-
-add_new_country(name=country, time_visited=visits, cities_visited=list_of_cities)
+# country = input("Add country name\n")
+# visits = int(input("Number of visits\n"))
+# list_of_cities = eval(input("create list from formatted string\n"))
+#
+#
+# def add_new_country(name, time_visited, cities_visited):
+#     new_country = {}
+#     new_country["country"] = name
+#     new_country["visits"] = time_visited
+#     new_country["cities"] = cities_visited
+#     print(new_country)
+#
+#
+# add_new_country(name=country, time_visited=visits, cities_visited=list_of_cities)
 
 # Solution and Complete Code for the Secret Auction Program
 
-from replit import clear
+# from replit import clear
+# from art import logo
+# print(logo)
+#
+# bids = {}
+# bidding_finished = False
+#
+#
+# def find_highest_bidder(bidding_record):
+#     highest_bid = 0
+#     winner = ""
+#     for bidder in bidding_record:
+#         bid_amount = bidding_record[bidder]
+#         if bid_amount > highest_bid:
+#             highest_bid = bid_amount
+#             winner = bidder
+#     print(f"The winner is {winner} with a bid of ${highest_bid}")
+#
+#
+# while not bidding_finished:
+#     name = input("What is your name\n")
+#     price = int(input("What is  your bid $\n"))
+#     bids[name] = price
+#     should_continue = input("Are there any other bidders? Type 'yes' or 'no'.\n")
+#     if should_continue == "no":
+#         bidding_finished = True
+#         find_highest_bidder(bids)
+#     elif should_continue == "yes":
+#         clear()
+
+# Functions with Outputs
+
+def format_name(f_name, l_name):
+    print(f_name.title())
+    print(l_name.title())
+
+
+format_name("siddharth", "TAMSE")
+
+
+def formate_name(f_name, l_name):
+    formated_f_name = f_name.title()
+    formated_l_name = l_name.title()
+    print(f"{formated_f_name} {formated_l_name}")
+
+
+formate_name("SiDDhartH", "tAMse")
+
+# Function with Output using return type
+
+
+def formate_name(f_name, l_name):
+    formated_f_name = f_name.title()
+    formated_l_name = l_name.title()
+    return f"{formated_f_name} {formated_l_name}"
+
+
+print(formate_name("SidDHartH", "tAmSE"))
+
+
+def formate_name(f_name, l_name):
+    if f_name == "" or l_name == "":
+        return "You didn't provide valid inputs."
+    formated_f_name = f_name.title()
+    formated_l_name = l_name.title()
+    return f"Result: {formated_f_name} {formated_l_name}"
+
+
+print(formate_name(input("What is your first name?\n"),
+                   input("What is your last name?\n"))
+      )
+
+# [Interactive Coding Exercise] Days in Month
+
+
+def is_leap(year):
+    if year % 4 == 0:
+        if year % 100 ==0:
+            if year % 400 == 0:
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+
+
+def days_in_month(year, month):
+    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if month == 2 and is_leap(year):
+        return 29
+    else:
+        return month_days[month - 1]
+
+
+year = int((input("Enter a year\n")))
+month = int(input("Enter a month\n"))
+days = days_in_month(year, month)
+print(days)
+
+# Quiz question 1
+
+
+def add(n1, n2):
+    return n1 + n2
+
+
+def subtract(n1, n2):
+    return n1 - n2
+
+
+def multiply(n1, n2):
+    return n1 * n2
+
+
+def divide(n1, n2):
+    return n1 / n2
+
+
+print(add(2, multiply(5, divide(8, 4))))
+
+# Quiz question 2
+
+
+def outer_function(a, b):
+    def inner_function(c, d):
+        return c + d
+
+    return inner_function(a, b)
+
+
+result = outer_function(5, 10)
+print(result)
+
+
+# Quiz question 3
+
+def my_function(a):
+    if a < 40:
+        return
+        print("Terrible")
+    if a < 80:
+        return "Pass"
+    else:
+        return "Great"
+
+
+print(my_function(25))
+
+
+# Calculator
+
 from art import logo
-print(logo)
-
-bids = {}
-bidding_finished = False
 
 
-def find_highest_bidder(bidding_record):
-    highest_bid = 0
-    winner = ""
-    for bidder in bidding_record:
-        bid_amount = bidding_record[bidder]
-        if bid_amount > highest_bid:
-            highest_bid = bid_amount
-            winner = bidder
-    print(f"The winner is {winner} with a bid of ${highest_bid}")
+def add(n1, n2):
+    return n1 + n2
 
 
-while not bidding_finished:
-    name = input("What is your name\n")
-    price = int(input("What is  your bid $\n"))
-    bids[name] = price
-    should_continue = input("Are there any other bidders? Type 'yes' or 'no'.\n")
-    if should_continue == "no":
-        bidding_finished = True
-        find_highest_bidder(bids)
-    elif should_continue == "yes":
-        clear()
+def subtract(n1, n2):
+    return n1 - n2
+
+
+def multiply(n1, n2):
+    return n1 * n2
+
+
+def divide(n1, n2):
+    return n1 / n2
+
+
+operations = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide,
+}
+
+
+def calculator():
+    print(logo)
+    num1 = float(input("What's the first number?:\n"))
+    for symbol in operations:
+        print(symbol)
+    should_continue = True
+
+    while should_continue:
+        operations_symbol = input("Pick an operation\n")
+        num2 = float(input("What's the next number?:\n"))
+        calculation_function = operations[operations_symbol]
+        answer = calculation_function(num1, num2)
+
+        print(f"{num1} {operations_symbol} {num2} = {answer}")
+
+        if input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculating :") == "y":
+            num1 = answer
+        else:
+            should_continue = False
+            calculator()
+
+
+calculator()
+
