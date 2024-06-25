@@ -881,7 +881,7 @@ import random
 #     "Function": "A piece of code that you can easily call over and over again",
 #     "Loop": "The action of doing something over and over again"
 # }
-
+#
 # print(programming_dictionary["Bug"])
 
 # Empty dictionary
@@ -944,7 +944,7 @@ import random
 #     else:
 #         student_grade[student] = "Fail"
 # print(student_grade)
-#
+
 
 # program
 
@@ -1093,175 +1093,252 @@ import random
 
 # Functions with Outputs
 
-def format_name(f_name, l_name):
-    print(f_name.title())
-    print(l_name.title())
-
-
-format_name("siddharth", "TAMSE")
-
-
-def formate_name(f_name, l_name):
-    formated_f_name = f_name.title()
-    formated_l_name = l_name.title()
-    print(f"{formated_f_name} {formated_l_name}")
-
-
-formate_name("SiDDhartH", "tAMse")
+# def format_name(f_name, l_name):
+#     print(f_name.title())
+#     print(l_name.title())
+#
+#
+# format_name("siddharth", "TAMSE")
+#
+#
+# def formate_name(f_name, l_name):
+#     formated_f_name = f_name.title()
+#     formated_l_name = l_name.title()
+#     print(f"{formated_f_name} {formated_l_name}")
+#
+#
+# formate_name("SiDDhartH", "tAMse")
 
 # Function with Output using return type
 
 
-def formate_name(f_name, l_name):
-    formated_f_name = f_name.title()
-    formated_l_name = l_name.title()
-    return f"{formated_f_name} {formated_l_name}"
-
-
-print(formate_name("SidDHartH", "tAmSE"))
-
-
-def formate_name(f_name, l_name):
-    if f_name == "" or l_name == "":
-        return "You didn't provide valid inputs."
-    formated_f_name = f_name.title()
-    formated_l_name = l_name.title()
-    return f"Result: {formated_f_name} {formated_l_name}"
-
-
-print(formate_name(input("What is your first name?\n"),
-                   input("What is your last name?\n"))
-      )
+# def formate_name(f_name, l_name):
+#     formated_f_name = f_name.title()
+#     formated_l_name = l_name.title()
+#     return f"{formated_f_name} {formated_l_name}"
+#
+#
+# print(formate_name("SidDHartH", "tAmSE"))
+#
+#
+# def formate_name(f_name, l_name):
+#     if f_name == "" or l_name == "":
+#         return "You didn't provide valid inputs."
+#     formated_f_name = f_name.title()
+#     formated_l_name = l_name.title()
+#     return f"Result: {formated_f_name} {formated_l_name}"
+#
+#
+# print(formate_name(input("What is your first name?\n"),
+#                    input("What is your last name?\n"))
+#       )
 
 # [Interactive Coding Exercise] Days in Month
 
 
-def is_leap(year):
-    if year % 4 == 0:
-        if year % 100 ==0:
-            if year % 400 == 0:
-                return True
-            else:
-                return False
-        else:
-            return True
-    else:
-        return False
-
-
-def days_in_month(year, month):
-    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    if month == 2 and is_leap(year):
-        return 29
-    else:
-        return month_days[month - 1]
-
-
-year = int((input("Enter a year\n")))
-month = int(input("Enter a month\n"))
-days = days_in_month(year, month)
-print(days)
+# def is_leap(year):
+#     if year % 4 == 0:
+#         if year % 100 ==0:
+#             if year % 400 == 0:
+#                 return True
+#             else:
+#                 return False
+#         else:
+#             return True
+#     else:
+#         return False
+#
+#
+# def days_in_month(year, month):
+#     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+#     if month == 2 and is_leap(year):
+#         return 29
+#     else:
+#         return month_days[month - 1]
+#
+#
+# year = int((input("Enter a year\n")))
+# month = int(input("Enter a month\n"))
+# days = days_in_month(year, month)
+# print(days)
 
 # Quiz question 1
 
 
-def add(n1, n2):
-    return n1 + n2
-
-
-def subtract(n1, n2):
-    return n1 - n2
-
-
-def multiply(n1, n2):
-    return n1 * n2
-
-
-def divide(n1, n2):
-    return n1 / n2
-
-
-print(add(2, multiply(5, divide(8, 4))))
+# def add(n1, n2):
+#     return n1 + n2
+#
+#
+# def subtract(n1, n2):
+#     return n1 - n2
+#
+#
+# def multiply(n1, n2):
+#     return n1 * n2
+#
+#
+# def divide(n1, n2):
+#     return n1 / n2
+#
+#
+# print(add(2, multiply(5, divide(8, 4))))
 
 # Quiz question 2
 
 
-def outer_function(a, b):
-    def inner_function(c, d):
-        return c + d
-
-    return inner_function(a, b)
-
-
-result = outer_function(5, 10)
-print(result)
+# def outer_function(a, b):
+#     def inner_function(c, d):
+#         return c + d
+#
+#     return inner_function(a, b)
+#
+#
+# result = outer_function(5, 10)
+# print(result)
 
 
 # Quiz question 3
 
-def my_function(a):
-    if a < 40:
-        return
-        print("Terrible")
-    if a < 80:
-        return "Pass"
-    else:
-        return "Great"
-
-
-print(my_function(25))
+# def my_function(a):
+#     if a < 40:
+#         return
+#         print("Terrible")
+#     if a < 80:
+#         return "Pass"
+#     else:
+#         return "Great"
+#
+#
+# print(my_function(25))
 
 
 # Calculator
 
+# from art import logo
+#
+#
+# def add(n1, n2):
+#     return n1 + n2
+#
+#
+# def subtract(n1, n2):
+#     return n1 - n2
+#
+#
+# def multiply(n1, n2):
+#     return n1 * n2
+#
+#
+# def divide(n1, n2):
+#     return n1 / n2
+#
+#
+# operations = {
+#     "+": add,
+#     "-": subtract,
+#     "*": multiply,
+#     "/": divide,
+# }
+#
+#
+# def calculator():
+#     print(logo)
+#     num1 = float(input("What's the first number?:\n"))
+#     for symbol in operations:
+#         print(symbol)
+#     should_continue = True
+#
+#     while should_continue:
+#         operations_symbol = input("Pick an operation\n")
+#         num2 = float(input("What's the next number?:\n"))
+#         calculation_function = operations[operations_symbol]
+#         answer = calculation_function(num1, num2)
+#
+#         print(f"{num1} {operations_symbol} {num2} = {answer}")
+#
+#         if input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculating :") == "y":
+#             num1 = answer
+#         else:
+#             should_continue = False
+#             calculator()
+#
+#
+# calculator()
+
+# Blackjack program
+from replit import clear
 from art import logo
 
 
-def add(n1, n2):
-    return n1 + n2
+def deal_card():
+    """Returns a random card from the deck."""
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    card = random.choice(cards)
+    return card
 
 
-def subtract(n1, n2):
-    return n1 - n2
+def calculate_score(cards):
+    """Take a list of cards and return the score calculated from the cards"""
+    if sum(cards) == 21 and len(cards) == 2:
+        return 0
+
+    if 11 in cards and sum(cards) > 21:
+        cards.remove(11)
+        cards.append(1)
+    return sum(cards)
 
 
-def multiply(n1, n2):
-    return n1 * n2
+def compare(user_score, computer_score):
+    if user_score == computer_score:
+        return "Draw"
+    elif computer_score == 0:
+        return "Lose, opponent has Blackjack"
+    elif user_score == 0:
+        return "Win with a Blackjack"
+    elif user_score > 21:
+        return "You went over. You lose"
+    elif computer_score > 21:
+        return "Opponent went over. You win"
+    elif user_score > computer_score:
+        return "You win"
+    else:
+        return "You lose"
 
 
-def divide(n1, n2):
-    return n1 / n2
-
-
-operations = {
-    "+": add,
-    "-": subtract,
-    "*": multiply,
-    "/": divide,
-}
-
-
-def calculator():
+def play_game():
     print(logo)
-    num1 = float(input("What's the first number?:\n"))
-    for symbol in operations:
-        print(symbol)
-    should_continue = True
+    user_cards = []
+    computer_cards = []
+    is_game_over = False
 
-    while should_continue:
-        operations_symbol = input("Pick an operation\n")
-        num2 = float(input("What's the next number?:\n"))
-        calculation_function = operations[operations_symbol]
-        answer = calculation_function(num1, num2)
+    for _ in range(2):
+        user_cards.append(deal_card())
+        computer_cards.append(deal_card())
 
-        print(f"{num1} {operations_symbol} {num2} = {answer}")
+    while not is_game_over:
+        user_score = calculate_score(user_cards)
+        computer_score = calculate_score(computer_cards)
+        print(f"   Your cards: {user_cards}, current score: {user_score}")
+        print(f"   Computer's first card: {computer_cards[0]}")
 
-        if input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculating :") == "y":
-            num1 = answer
+        if user_score == 0 or computer_score == 0 or user_score > 21:
+            is_game_over = True
         else:
-            should_continue = False
-            calculator()
+            user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
+            if user_should_deal == "y":
+                user_cards.append(deal_card())
+            else:
+                is_game_over = True
+
+    while computer_score != 0 and computer_score < 17:
+        computer_cards.append(deal_card())
+        computer_score = calculate_score(computer_cards)
+
+    print(f"  Your final hand: {user_cards}, final score: {user_score}")
+    print(f" Computer's final hand: {computer_cards}, final score: {computer_score}")
+    print(compare(user_score, computer_score))
 
 
-calculator()
-
+while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
+    clear()
+    play_game()
