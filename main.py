@@ -1346,109 +1346,284 @@ import random
 
 # Namespaces: Local vs. Global Scope
 
-enemies = 1
+# enemies = 1
 
 
-def increase_enemies():
-    enemies = 2
-    print(f" enemies inside function: {enemies}")
-
-
-increase_enemies()
-print(f" enemies outside function: {enemies}")
+# def increase_enemies():
+#     enemies = 2
+#     print(f" enemies inside function: {enemies}")
+#
+#
+# increase_enemies()
+# print(f" enemies outside function: {enemies}")
 
 # Local scope
 
-def drink_position():
-    position_strength = 2
-    print(position_strength)
 
+# def drink_position():
+#     position_strength = 2
+#     print(position_strength)
+#
+#
+# drink_position()
 
-drink_position()
+# Global variable
 
-Global variable
-
-player_health = 10
-
-
-def drink_potion():
-    potion_strength = 2
-    print(player_health)
-
-
-drink_potion()
-print(player_health)
+# player_health = 10
+#
+#
+# def drink_potion():
+#     potion_strength = 2
+#     print(player_health)
+#
+#
+# drink_potion()
+# print(player_health)
 
 # There is no Block Scope
 
-game_level = 3
-
-
-def create_enemy():
-    enemies = ["Skeleton", "Zombie", "Alien"]
-    if game_level < 5:
-        new_enemy = enemies[0]
-
-    print(new_enemy)
+# game_level = 3
+#
+#
+# def create_enemy():
+#     enemies = ["Skeleton", "Zombie", "Alien"]
+#     if game_level < 5:
+#         new_enemy = enemies[0]
+#
+#     print(new_enemy)
 
 # How to Modify a Global Variable
 
-enemies = 1
+# enemies = 1
 
 
-def increase_enemies():
-    print(f"enemies inside function: {enemies}")
-    return enemies + 1
-
-
-enymy = increase_enemies()
-print(f"enemies outside function: {enymy}")
+# def increase_enemies():
+#     print(f"enemies inside function: {enemies}")
+#     return enemies + 1
+#
+#
+# ene = increase_enemies()
+# print(f"enemies outside function: {ene}")
 
 # The Number Guessing Game
 
 from random import randint
 
-EASY_LEVEL_TURNS = 10
-HARD_LEVEL_TURNS = 5
+# EASY_LEVEL_TURNS = 10
+# HARD_LEVEL_TURNS = 5
+#
+#
+# def check_answer(guess, answer, turns):
+#     """checks answer against guess. Return the number of turns remaining."""
+#     if guess > answer:
+#         print("Too high")
+#         return turns - 1
+#     elif guess < answer:
+#         print("Too low")
+#         return turns - 1
+#     else:
+#         print(f"You got it! The answer was {answer}.")
+#
+#
+# def set_defficulty():
+#     level = input("Choose a difficulty. Type 'easy' or 'hard': ")
+#     if level == "easy":
+#         return EASY_LEVEL_TURNS
+#     else:
+#         return HARD_LEVEL_TURNS
+#
+#
+# def game():
+#     print("Welcome to the Number Guessing Game!")
+#     print("I'm thinking of a number between 1 and 100")
+#     answer = randint(1, 100)
+#
+#     turns = set_defficulty()
+#
+#     guess = 0
+#     while guess != answer:
+#         print(f"You have {turns} attempts remaining to guess the number.")
+#         guess = int(input("Make a guess:"))
+#         turns = check_answer(guess, answer, turns)
+#         if turns == 0:
+#             print("you've run out of guesses, you lose.")
+#             return
+#         elif guess != answer:
+#             print("Guess again.")
+#
+#
+# game()
+
+# Debugging
+
+# Describe Problem
 
 
-def check_answer(guess, answer, turns):
-    """checks answer against guess. Return the number of turns remaining."""
-    if guess > answer:
-        print("Too high")
-        return turns - 1
-    elif guess < answer:
-        print("Too low")
-        return turns - 1
+def my_function():
+    for i in range(1, 20):
+        if i == 20:
+            print("You got it")
+
+
+my_function()
+
+
+# solution
+
+def my_function():
+    for i in range(1, 21):
+        if i == 20:
+            print("You got it")
+
+
+my_function()
+
+
+# Reproduce the Bug
+
+from random import randint
+dice_imgs = ["1", "2", "3", "4", "5", "6"]
+dice_num = randint(1, 6)
+print(dice_imgs[dice_num])
+
+
+# Solution
+
+from random import randint
+dice_imgs = ["1", "2", "3", "4", "5", "6"]
+dice_num = randint(0, 5)
+print(dice_imgs[dice_num])
+
+# Play Computer
+
+year = int(input("What's your year of birth?"))
+if year > 1980 and year < 1994:
+    print("You are a millenial.")
+elif year > 1994:
+    print("you are a Gen Z.")
+
+# Solution
+
+year = int(input("What's your year of birth?\n"))
+if year > 1980 and year < 1994:
+    print("You are a millenial.")
+elif year >= 1994:
+    print("you are a Gen Z.")
+
+# Fix the Error
+
+age = input("How old are you\n")
+if age < 18:
+    print("You can drive at age {age}")
+
+# Solution
+
+age = int(input("How old are you\n"))
+if age < 18:
+    print(f"You can drive at age {age}")
+
+
+# Print is Your Friend
+
+pages = 0
+word_per_pages = 0
+pages = int(input("Number of pages: \n"))
+word_per_pages == int(input("Number of words per pages\n"))
+total_words = pages * word_per_pages
+print(total_words)
+
+
+# Solution
+
+pages = 0
+word_per_pages = 0
+pages = int(input("Number of pages: \n"))
+word_per_pages = int(input("Number of words per pages\n"))
+total_words = pages * word_per_pages
+print(f"pages = {pages}")
+print(f"words_per_pages = {word_per_pages}")
+print(total_words)
+
+
+# Use a Debugger
+
+def mutate(a_list):
+    b_list = []
+    for item in a_list:
+        new_item = item * 2
+    b_list.append(new_item)
+
+    print(b_list)
+
+
+mutate([1, 2, 3, 5, 8, 13])
+
+# Solution
+
+def mutate(a_list):
+    b_list = []
+    for item in a_list:
+        new_item = item * 2
+        b_list.append(new_item)
+
+    print(b_list)
+
+
+mutate([1, 2, 3, 5, 8, 13])
+
+
+# Higher Lower Game
+
+from art import logo, vs
+from game_data import data
+from replit import clear
+
+
+def format_data(account):
+    """Takes the account data and return the printable format."""
+    account_name = account["name"]
+    account_descr = account["description"]
+    account_country = account["country"]
+    return f"{account_name}, a {account_descr}, from {account_country}"
+
+
+def check_answer(guess, a_followers, b_followers):
+    """Take the user guess and follower counts and return if they got it right"""
+    if a_followers > b_followers:
+        return guess == "a"
     else:
-        print(f"You got it! The answer was {answer}.")
+        return guess == "b"
 
 
-def set_defficulty():
-    level = input("Choose a difficulty. Type 'easy' or 'hard': ")
-    if level == "easy":
-        return EASY_LEVEL_TURNS
+print(logo)
+score = 0
+game_should_continue = True
+account_b = random.choice(data)
+
+while game_should_continue:
+    account_a = account_b
+    account_b = random.choice(data)
+    while account_a == account_b:
+        account_b = random.choice(data)
+
+    print(f"Compare A: {format_data(account_a)}.")
+    print(vs)
+    print(f"Against B: {format_data(account_b)}.")
+
+    guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+
+    a_follower_count = account_a["follower_count"]
+    b_follower_count = account_b["follower_count"]
+    is_correct = check_answer(guess, a_follower_count, b_follower_count)
+
+    clear()
+    print(logo)
+    
+    if is_correct:
+        score += 1
+        print(f"You're right! Current score: {score}")
     else:
-        return HARD_LEVEL_TURNS
+        game_should_continue = False
+        print(f"Sorry, that's wrong. Final score: {score}")
 
 
-def game():
-    print("Welcome to the Number Guessing Game!")
-    print("I'm thinking of a number between 1 and 100")
-    answer = randint(1, 100)
-
-    turns = set_defficulty()
-
-    guess = 0
-    while guess != answer:
-        print(f"You have {turns} attempts remaining to guess the number.")
-        guess = int(input("Make a guess:"))
-        turns = check_answer(guess, answer, turns)
-        if turns == 0:
-            print("you've run out of guesses, you lose.")
-            return
-        elif guess != answer:
-            print("Guess again.")
-
-
-game()
