@@ -63,7 +63,7 @@ import random
 # print(12+45)
 
 #Large Number
- # 12_34_98
+# 12_34_98
 
 #Float
 
@@ -80,7 +80,6 @@ import random
 #
 # num_char_1 = "Hello"
 # print(type(num_char_1))
-
 
 
 # num_char = len(input("What is your name \n"))
@@ -423,6 +422,7 @@ import random
 # Random Module
 
 import random
+
 # random_integer = random.randint(1, 10)
 # print(random_integer)
 #
@@ -1109,6 +1109,7 @@ import random
 #
 # formate_name("SiDDhartH", "tAMse")
 
+
 # Function with Output using return type
 
 
@@ -1119,7 +1120,7 @@ import random
 #
 #
 # print(formate_name("SidDHartH", "tAmSE"))
-#
+
 #
 # def formate_name(f_name, l_name):
 #     if f_name == "" or l_name == "":
@@ -1347,8 +1348,8 @@ import random
 # Namespaces: Local vs. Global Scope
 
 # enemies = 1
-
-
+#
+#
 # def increase_enemies():
 #     enemies = 2
 #     print(f" enemies inside function: {enemies}")
@@ -1370,8 +1371,8 @@ import random
 # Global variable
 
 # player_health = 10
-#
-#
+
+
 # def drink_potion():
 #     potion_strength = 2
 #     print(player_health)
@@ -1391,12 +1392,13 @@ import random
 #         new_enemy = enemies[0]
 #
 #     print(new_enemy)
+#
 
 # How to Modify a Global Variable
 
 # enemies = 1
-
-
+#
+#
 # def increase_enemies():
 #     print(f"enemies inside function: {enemies}")
 #     return enemies + 1
@@ -1407,8 +1409,8 @@ import random
 
 # The Number Guessing Game
 
-from random import randint
-
+# from random import randint
+#
 # EASY_LEVEL_TURNS = 10
 # HARD_LEVEL_TURNS = 5
 #
@@ -1454,176 +1456,274 @@ from random import randint
 #
 # game()
 
+
 # Debugging
 
 # Describe Problem
 
 
-def my_function():
-    for i in range(1, 20):
-        if i == 20:
-            print("You got it")
-
-
-my_function()
+# def my_function():
+#     for i in range(1, 20):
+#         if i == 20:
+#             print("You got it")
+#
+#
+# my_function()
 
 
 # solution
 
-def my_function():
-    for i in range(1, 21):
-        if i == 20:
-            print("You got it")
-
-
-my_function()
-
+# def my_function():
+#     for i in range(1, 21):
+#         if i == 20:
+#             print("You got it")
+#
+#
+# my_function()
 
 # Reproduce the Bug
 
-from random import randint
-dice_imgs = ["1", "2", "3", "4", "5", "6"]
-dice_num = randint(1, 6)
-print(dice_imgs[dice_num])
-
+# from random import randint
+#
+# dice_imgs = ["1", "2", "3", "4", "5", "6"]
+# dice_num = randint(1, 6)
+# print(dice_imgs[dice_num])
 
 # Solution
 
-from random import randint
-dice_imgs = ["1", "2", "3", "4", "5", "6"]
-dice_num = randint(0, 5)
-print(dice_imgs[dice_num])
+# from random import randint
+#
+# dice_imgs = ["1", "2", "3", "4", "5", "6"]
+# dice_num = randint(0, 5)
+# print(dice_imgs[dice_num])
 
 # Play Computer
 
-year = int(input("What's your year of birth?"))
-if year > 1980 and year < 1994:
-    print("You are a millenial.")
-elif year > 1994:
-    print("you are a Gen Z.")
+# year = int(input("What's your year of birth?"))
+# if year > 1980 and year < 1994:
+#     print("You are a millenial.")
+# elif year > 1994:
+#     print("you are a Gen Z.")
 
 # Solution
 
-year = int(input("What's your year of birth?\n"))
-if year > 1980 and year < 1994:
-    print("You are a millenial.")
-elif year >= 1994:
-    print("you are a Gen Z.")
+# year = int(input("What's your year of birth?\n"))
+# if year > 1980 and year < 1994:
+#     print("You are a millenial.")
+# elif year >= 1994:
+#     print("you are a Gen Z.")
 
 # Fix the Error
 
-age = input("How old are you\n")
-if age < 18:
-    print("You can drive at age {age}")
+# age = input("How old are you\n")
+# if age < 18:
+#     print("You can drive at age {age}")
 
 # Solution
 
-age = int(input("How old are you\n"))
-if age < 18:
-    print(f"You can drive at age {age}")
-
+# age = int(input("How old are you\n"))
+# if age < 18:
+#     print(f"You can drive at age {age}")
 
 # Print is Your Friend
 
-pages = 0
-word_per_pages = 0
-pages = int(input("Number of pages: \n"))
-word_per_pages == int(input("Number of words per pages\n"))
-total_words = pages * word_per_pages
-print(total_words)
-
+# pages = 0
+# word_per_pages = 0
+# pages = int(input("Number of pages: \n"))
+# word_per_pages == int(input("Number of words per pages\n"))
+# total_words = pages * word_per_pages
+# print(total_words)
 
 # Solution
 
-pages = 0
-word_per_pages = 0
-pages = int(input("Number of pages: \n"))
-word_per_pages = int(input("Number of words per pages\n"))
-total_words = pages * word_per_pages
-print(f"pages = {pages}")
-print(f"words_per_pages = {word_per_pages}")
-print(total_words)
+# pages = 0
+# word_per_pages = 0
+# pages = int(input("Number of pages: \n"))
+# word_per_pages = int(input("Number of words per pages\n"))
+# total_words = pages * word_per_pages
+# print(f"pages = {pages}")
+# print(f"words_per_pages = {word_per_pages}")
+# print(total_words)
 
 
 # Use a Debugger
 
-def mutate(a_list):
-    b_list = []
-    for item in a_list:
-        new_item = item * 2
-    b_list.append(new_item)
+# def mutate(a_list):
+#     b_list = []
+#     for item in a_list:
+#         new_item = item * 2
+#     b_list.append(new_item)
+#
+#     print(b_list)
+#
+#
+# mutate([1, 2, 3, 5, 8, 13])
 
-    print(b_list)
-
-
-mutate([1, 2, 3, 5, 8, 13])
 
 # Solution
 
-def mutate(a_list):
-    b_list = []
-    for item in a_list:
-        new_item = item * 2
-        b_list.append(new_item)
 
-    print(b_list)
-
-
-mutate([1, 2, 3, 5, 8, 13])
-
+# def mutate(a_list):
+#     b_list = []
+#     for item in a_list:
+#         new_item = item * 2
+#         b_list.append(new_item)
+#
+#     print(b_list)
+#
+#
+# mutate([1, 2, 3, 5, 8, 13])
 
 # Higher Lower Game
 
-from art import logo, vs
-from game_data import data
-from replit import clear
+# from art import logo, vs
+# from game_data import data
+# from replit import clear
+#
+#
+# def format_data(account):
+#     """Takes the account data and return the printable format."""
+#     account_name = account["name"]
+#     account_descr = account["description"]
+#     account_country = account["country"]
+#     return f"{account_name}, a {account_descr}, from {account_country}"
+#
+#
+# def check_answer(guess, a_followers, b_followers):
+#     """Take the user guess and follower counts and return if they got it right"""
+#     if a_followers > b_followers:
+#         return guess == "a"
+#     else:
+#         return guess == "b"
+#
+#
+# print(logo)
+# score = 0
+# game_should_continue = True
+# account_b = random.choice(data)
+#
+# while game_should_continue:
+#     account_a = account_b
+#     account_b = random.choice(data)
+#     while account_a == account_b:
+#         account_b = random.choice(data)
+#
+#     print(f"Compare A: {format_data(account_a)}.")
+#     print(vs)
+#     print(f"Against B: {format_data(account_b)}.")
+#
+#     guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+#
+#     a_follower_count = account_a["follower_count"]
+#     b_follower_count = account_b["follower_count"]
+#     is_correct = check_answer(guess, a_follower_count, b_follower_count)
+#
+#     clear()
+#     print(logo)
+#
+#     if is_correct:
+#         score += 1
+#         print(f"You're right! Current score: {score}")
+#     else:
+#         game_should_continue = False
+#         print(f"Sorry, that's wrong. Final score: {score}")
 
 
-def format_data(account):
-    """Takes the account data and return the printable format."""
-    account_name = account["name"]
-    account_descr = account["description"]
-    account_country = account["country"]
-    return f"{account_name}, a {account_descr}, from {account_country}"
+# Coffee Machine Code
+
+MENU = {
+    "espresso": {
+        "ingredients": {
+            "water": 50,
+            "coffee": 18,
+        },
+        "cost": 1.5,
+    },
+    "latte": {
+        "ingredients": {
+            "water": 200,
+            "milk": 150,
+            "coffee": 24,
+        },
+        "cost": 2.5,
+    },
+    "cappuccino": {
+        "ingredients": {
+            "water": 250,
+            "milk": 100,
+            "coffee": 24,
+        },
+        "cost": 3.0,
+    }
+}
+
+profit = 0
+resources = {
+    "water": 300,
+    "milk": 200,
+    "coffee": 100,
+}
 
 
-def check_answer(guess, a_followers, b_followers):
-    """Take the user guess and follower counts and return if they got it right"""
-    if a_followers > b_followers:
-        return guess == "a"
+def is_resource_sufficient(order_ingredients):
+    """Returns True when order can be made, False if ingredients are insufficient"""
+    for item in order_ingredients:
+        if order_ingredients[item] >= resources[item]:
+            print(f"Sorry there is not enough {item}")
+            return False
+    return True
+
+
+def process_coins():
+    """Return the total calculated from coins inserted."""
+    print("Please insert coins.")
+    total = int(input("how many quarters?: ")) * 0.23
+    total += int(input("how many dimes?: ")) * 0.1
+    total += int(input("how many nickles?: ")) * 0.05
+    total += int(input("how many pennies?: ")) * 0.01
+    return total
+
+
+def is_transaction_successful(money_received, drink_cost):
+    """Return True when payment is accepted, or False if money is insufficient."""
+    if money_received >= drink_cost:
+        change = round(money_received - drink_cost, 2)
+        print(f"Here is ${change} in change.")
+        global profit
+        profit += drink_cost
+        return True
     else:
-        return guess == "b"
+        print("Sorry that's not enough money. Money refunded.")
+        return False
 
+def make_coffe(drink_name, order_ingredients):
+    """Deduct the required ingredients from the resources"""
+    for item in order_ingredients:
+        resources[item] -= order_ingredients[item]
+    print(f"Here is your {drink_name}")
 
-print(logo)
-score = 0
-game_should_continue = True
-account_b = random.choice(data)
+is_on = True
 
-while game_should_continue:
-    account_a = account_b
-    account_b = random.choice(data)
-    while account_a == account_b:
-        account_b = random.choice(data)
-
-    print(f"Compare A: {format_data(account_a)}.")
-    print(vs)
-    print(f"Against B: {format_data(account_b)}.")
-
-    guess = input("Who has more followers? Type 'A' or 'B': ").lower()
-
-    a_follower_count = account_a["follower_count"]
-    b_follower_count = account_b["follower_count"]
-    is_correct = check_answer(guess, a_follower_count, b_follower_count)
-
-    clear()
-    print(logo)
-    
-    if is_correct:
-        score += 1
-        print(f"You're right! Current score: {score}")
+while is_on:
+    choice = input("What would you like? (espresso/latte/cappuccino): ")
+    if choice == "off":
+        is_on = False
+    elif choice == "report":
+        print(f"Water: {resources['water']}ml")
+        print(f"Milk: {resources['milk']}ml")
+        print(f"Coffee: {resources['coffee']}g")
+        print(f"Money: &{profit}")
     else:
-        game_should_continue = False
-        print(f"Sorry, that's wrong. Final score: {score}")
+        drink = MENU[choice]
+        if is_resource_sufficient(drink["ingredients"]):
+            payment = process_coins()
+            if is_transaction_successful(payment, drink["cost"]):
+                make_coffe(choice, drink["ingredients"])
+
+
+
+
+
+
 
 
