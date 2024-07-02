@@ -1762,53 +1762,130 @@ import random
 
 # Object Oriented Programming
 
-import another_module
-print(another_module.another_variable)
+# import another_module
+# print(another_module.another_variable)
+#
+# from turtle import Turtle, Screen
+# timmy = Turtle()
+# print(timmy)
+# timmy.shape("turtle")
+# timmy.color("coral")
+# timmy.forward(100)
+#
+# my_screen = Screen()
+# print(my_screen.canvheight)
+# my_screen.exitonclick()
+#
+# # Create a table using PrettyTable
+#
+# from prettytable import PrettyTable
+# table = PrettyTable()
+# table.add_column("Pokemon Name", ["Pikachu", "Squirtle", "Charmander"])
+# table.add_column("Type", ["Electric", "Water", "Fire"])
+# table.align = "l"
+# print(table)
+#
+# # Building the Coffee Machine in OOP
+#
+# from menu import Menu, MenuItem
+# from coffee_maker import CoffeeMaker
+# from money_machine import MoneyMachine
+#
+# money_machine = MoneyMachine()
+# coffee_maker = CoffeeMaker()
+# menu = Menu()
+#
+# is_on = True
+#
+#
+# while is_on:
+#     options = menu.get_items()
+#     choice = input(f"What would you like? ({options}): ")
+#     if choice == "off":
+#         is_on = False
+#     elif choice == "report":
+#         coffee_maker.report()
+#         money_machine.report()
+#     else:
+#         drink = menu.find_drink(choice)
+#         if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
+#             coffee_maker.make_coffee(drink)
 
-from turtle import Turtle, Screen
-timmy = Turtle()
-print(timmy)
-timmy.shape("turtle")
-timmy.color("coral")
-timmy.forward(100)
+# Create a Class
 
-my_screen = Screen()
-print(my_screen.canvheight)
-my_screen.exitonclick()
-
-# Create a table using PrettyTable
-
-from prettytable import PrettyTable
-table = PrettyTable()
-table.add_column("Pokemon Name", ["Pikachu", "Squirtle", "Charmander"])
-table.add_column("Type", ["Electric", "Water", "Fire"])
-table.align = "l"
-print(table)
-
-# Building the Coffee Machine in OOP
-
-from menu import Menu, MenuItem
-from coffee_maker import CoffeeMaker
-from money_machine import MoneyMachine
-
-money_machine = MoneyMachine()
-coffee_maker = CoffeeMaker()
-menu = Menu()
-
-is_on = True
+class User:
+    pass
 
 
-while is_on:
-    options = menu.get_items()
-    choice = input(f"What would you like? ({options}): ")
-    if choice == "off":
-        is_on = False
-    elif choice == "report":
-        coffee_maker.report()
-        money_machine.report()
-    else:
-        drink = menu.find_drink(choice)
-        if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
-            coffee_maker.make_coffee(drink)
+user1 = User()
+
+# Working with Attributes, Class Constructors and the __init__() Function
 
 
+class User:
+    pass
+
+
+user_1 = User()
+user_1.id = "001"
+user_1.username = "Sid"
+
+print(user_1.username)
+
+user_2 = User()
+user_2.id = "002"
+user_2.username = "Manju"
+
+
+# __init__
+
+
+class User:
+    def __init__(self):
+        print("new user being created...")
+
+
+user_1 = User()
+user_1.id = "001"
+user_1.username = "Sid"
+
+print(user_1.username)
+
+user_2 = User()
+user_2.id = "002"
+user_2.username = "Manju"
+
+# Attributes
+
+class User:
+    def __init__(self, user_id, username):
+        self.id = user_id
+        self.username = username
+
+
+user_1 = User("001", "Sid")
+user_2 = User("002", "Manju")
+print(user_1.id)
+
+# Adding Methods to a Class
+
+class User:
+    def __init__(self, user_id, username):
+        self.id = user_id
+        self.username = username
+        self.followers = 0
+        self.following = 0
+
+    def follow(self, user):
+        user.followers += 1
+        self.following += 1
+
+
+user_1 = User("001", "Sid")
+user_2 = User("002", "Manju")
+
+user_1.follow(user_2)
+print(user_1.followers)
+print(user_1.following)
+print(user_2.followers)
+print(user_2.following)
