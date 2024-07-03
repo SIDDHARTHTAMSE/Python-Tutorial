@@ -1813,79 +1813,102 @@ import random
 
 # Create a Class
 
-class User:
-    pass
-
-
-user1 = User()
-
+# class User:
+#     pass
+#
+#
+# user1 = User()
+#
 # Working with Attributes, Class Constructors and the __init__() Function
 
 
-class User:
-    pass
-
-
-user_1 = User()
-user_1.id = "001"
-user_1.username = "Sid"
-
-print(user_1.username)
-
-user_2 = User()
-user_2.id = "002"
-user_2.username = "Manju"
-
+# class User:
+#     pass
+#
+#
+# user_1 = User()
+# user_1.id = "001"
+# user_1.username = "Sid"
+#
+# print(user_1.username)
+#
+# user_2 = User()
+# user_2.id = "002"
+# user_2.username = "Manju"
+#
 
 # __init__
 
-
-class User:
-    def __init__(self):
-        print("new user being created...")
-
-
-user_1 = User()
-user_1.id = "001"
-user_1.username = "Sid"
-
-print(user_1.username)
-
-user_2 = User()
-user_2.id = "002"
-user_2.username = "Manju"
+#
+# class User:
+#     def __init__(self):
+#         print("new user being created...")
+#
+#
+# user_1 = User()
+# user_1.id = "001"
+# user_1.username = "Sid"
+#
+# print(user_1.username)
+#
+# user_2 = User()
+# user_2.id = "002"
+# user_2.username = "Manju"
 
 # Attributes
 
-class User:
-    def __init__(self, user_id, username):
-        self.id = user_id
-        self.username = username
 
-
-user_1 = User("001", "Sid")
-user_2 = User("002", "Manju")
-print(user_1.id)
+# class User:
+#     def __init__(self, user_id, username):
+#         self.id = user_id
+#         self.username = username
+#
+#
+# user_1 = User("001", "Sid")
+# user_2 = User("002", "Manju")
+# print(user_1.id)
 
 # Adding Methods to a Class
 
-class User:
-    def __init__(self, user_id, username):
-        self.id = user_id
-        self.username = username
-        self.followers = 0
-        self.following = 0
 
-    def follow(self, user):
-        user.followers += 1
-        self.following += 1
+# class User:
+#     def __init__(self, user_id, username):
+#         self.id = user_id
+#         self.username = username
+#         self.followers = 0
+#         self.following = 0
+#
+#     def follow(self, user):
+#         user.followers += 1
+#         self.following += 1
+#
+#
+# user_1 = User("001", "Sid")
+# user_2 = User("002", "Manju")
+#
+# user_1.follow(user_2)
+# print(user_1.followers)
+# print(user_1.following)
+# print(user_2.followers)
+# print(user_2.following)
 
+# Question and Answer project
 
-user_1 = User("001", "Sid")
-user_2 = User("002", "Manju")
+from question_model import Question
+from data import question_data
+from quiz_brain import QuizBrain
 
-user_1.follow(user_2)
-print(user_1.followers)
-print(user_1.following)
-print(user_2.followers)
-print(user_2.following)
+question_bank = []
+for question in question_data:
+    question_text = question["text"]
+    question_answer = question["answer"]
+    new_question = Question(question_text, question_answer)
+    question_bank.append(new_question)
+
+quiz = QuizBrain(question_bank)
+
+while quiz.still_has_question():
+    quiz.next_question()
+
+print("You've completed the quiz")
+print(f"Your final score was: {quiz.score}/{quiz.question_number}")
