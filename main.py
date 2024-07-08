@@ -1873,6 +1873,7 @@ import random
 
 # class User:
 #     def __init__(self, user_id, username):
+#         print("Hello")
 #         self.id = user_id
 #         self.username = username
 #         self.followers = 0
@@ -1894,21 +1895,77 @@ import random
 
 # Question and Answer project
 
-from question_model import Question
-from data import question_data
-from quiz_brain import QuizBrain
+# from question_model import Question
+# from data import question_data
+# from quiz_brain import QuizBrain
+#
+# question_bank = []
+# for question in question_data:
+#     question_text = question["text"]
+#     question_answer = question["answer"]
+#     new_question = Question(question_text, question_answer)
+#     question_bank.append(new_question)
+#
+# quiz = QuizBrain(question_bank)
+#
+# while quiz.still_has_question():
+#     quiz.next_question()
+#
+# print("You've completed the quiz")
+# print(f"Your final score was: {quiz.score}/{quiz.question_number}")
 
-question_bank = []
-for question in question_data:
-    question_text = question["text"]
-    question_answer = question["answer"]
-    new_question = Question(question_text, question_answer)
-    question_bank.append(new_question)
 
-quiz = QuizBrain(question_bank)
+# Understanding Turtle Graphics and How to use the Documentation
 
-while quiz.still_has_question():
-    quiz.next_question()
+# from turtle import Turtle, Screen
+#
+# timmy_the_turtle = Turtle()
+#
+# for _ in range(4):
+#     timmy_the_turtle.forward(100)
+#     timmy_the_turtle.left(90)
+#
+# screen = Screen()
+# screen.exitonclick()
 
-print("You've completed the quiz")
-print(f"Your final score was: {quiz.score}/{quiz.question_number}")
+# Draw a Dashed Line
+
+# import turtle as t
+#
+# tim = t.Turtle()
+#
+# for _ in range(15):
+#     tim.forward(10)
+#     tim.penup()
+#     tim.forward(10)
+#     tim.pendown()
+
+# Drawing Different Shapes
+
+import turtle as t
+
+
+tim = t.Turtle()
+
+colors = [
+    "medium aquamarine",
+    "blue",
+    "dark slate gray",
+    "green",
+    "yellow",
+    "maroon",
+    "purple"
+]
+
+
+def draw_shape(num_sides):
+    angle = 360 / num_sides
+    for _ in range(num_sides):
+        tim.forward(100)
+        tim.right(angle)
+
+
+for shape_side_n in range(3, 11):
+    tim.color(random.choice(colors))
+    draw_shape(shape_side_n)
+
